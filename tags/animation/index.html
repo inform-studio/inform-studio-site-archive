@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>Inform Studio – Science Illustration and Animation</title>
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="From journal covers and scientific illustration to technical graphics and explanatory animation, we translate scientific research into clear visual form.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <a href="/index.html"><img src="/images/inform-logo.svg"></a>
+      <nav>
+        <ul>
+          
+          <li><a href="/index.html" class="selected">Work</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="mailto:info@inform.studio">Contact</a></li>
+<!--          <li><a href="/blog/" >Blog</a></li>-->
+        </ul>
+      </nav>
+    </header>
+  <main>
+    <nav>
+      <p style="margin-top: 0.5rem; line-height: 1.5rem;">
+      
+        <a href="/index.html" >All</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
+      
+        <a href="/tags/illustration" >Illustration</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
+      
+        <a href="/tags/animation" class="tag-selected">Animation</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+      
+        <a href="/tags/infographics/" >Infographics</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+      
+        <a href="/tags/interactive-models/" >Interactive&nbsp;Models</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+      
+        <a href="/tags/journal-covers/" >Journal&nbsp;Covers</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+      
+        <a href="/tags/visual-design/" >Visual&nbsp;Design</a> <span style="padding: 0 0.25rem;">&#8226;</span>
+      
+        <a href="/tags/personal-projects/" >Personal&nbsp;Projects</a>
+        
+      </p>
+    </nav>    <div class="grid-container">
+      
+                <div class="grid-item">
+                    <a href="/work/test-video">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>This is a test of a video page</p>
+                          <p class="date">October 2017</p>
+                        </div>
+                      </div>
+                      <video autoplay loop muted playsinline class="lazy">
+                        <source
+                                data-src="/work/test-video/thumb.mp4"
+                                type="video/mp4"> 
+                        <img
+                             data-src="/work/test-video/thumb.jpg"
+                             title="Your browser does not support the <video> tag">
+                      </video>
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/quantum-dot-spin-switch">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>A quantum dot-based spin switch</p>
+                          <p class="date">October 2015</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
+                           data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
+                                        /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
+                           alt="This is a test of the subtitle of the image.">
+                    </a>
+                  </div>
+      
+          
+    </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+    
+      <script>
+        var lazyLoadInstance = new LazyLoad({
+          elements_selector: ".lazy",
+    //    callback_loaded: (el)=>{console.log("Loaded", el)}
+        });
+      </script>  </main>
+    <footer>
+      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:info@inform.studio" class="normal-link">info@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
+    </footer>
+  </body>
+</html>
