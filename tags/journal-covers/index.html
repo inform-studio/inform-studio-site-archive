@@ -5,46 +5,67 @@
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="From journal covers and scientific illustration to technical graphics and explanatory animation, we translate scientific research into clear visual form.">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,500,600&display=swap" rel="stylesheet">-->
     <link href="/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
-      <a href="/index.html"><img src="/images/inform-logo.svg"></a>
+      <a href="/index.html"><img src="/images/logo.svg" id="logo-full"></a>
       <nav>
         <ul>
           
-          <li><a href="/index.html" class="selected">Work</a></li>
+          <li><a href="/work/" class="selected">Work</a></li>
+          <li><a href="/blog/" >Blog</a></li>
           <li><a href="/about/" >About</a></li>
           <li><a href="mailto:info@inform.studio">Contact</a></li>
-<!--          <li><a href="/blog/" >Blog</a></li>-->
+          <a href="/index.html"><img src="/images/logo.svg" id="logo-mobile"></a>
         </ul>
       </nav>
-    </header>
-  <main>
+    </header>  <main>
     <nav>
-      <p style="margin-top: 0.5rem; line-height: 1.5rem;">
+      <p>
       
-        <a href="/index.html" >All</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
+        <a href="/work/" >All</a> <span class="nav-spacer">&#8226;</span> 
+        
+        <a href="/work/demo-reel/" >Demo Reel&nbsp;</a> <span class="nav-spacer">&#8226;</span>
       
-        <a href="/tags/illustration" >Illustration</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
+        <a href="/tags/illustration/" >Illustration</a> <span class="nav-spacer">&#8226;</span> 
       
-        <a href="/tags/animation" >Animation</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+        <a href="/tags/animation/" >Animation</a> <span class="nav-spacer">&#8226;</span>  
       
-        <a href="/tags/infographics/" >Infographics</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+        <a href="/tags/diagrams/" >Diagrams</a> <span class="nav-spacer">&#8226;</span>
+        
+        <a href="/tags/journal-covers/" class="tag-selected">Journal&nbsp;Covers</a> <span class="nav-spacer">&#8226;</span>   
       
-        <a href="/tags/interactive-models/" >Interactive&nbsp;Models</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+        <a href="/tags/interactive/" >Web / Interactive</a> 
+    
+    <!--    <a href="/tags/personal-projects/" >Personal&nbsp;Projects</a>-->
       
-        <a href="/tags/journal-covers/" class="tag-selected">Journal&nbsp;Covers</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
-      
-        <a href="/tags/visual-design/" >Visual&nbsp;Design</a> <span style="padding: 0 0.25rem;">&#8226;</span>
-      
-        <a href="/tags/personal-projects/" >Personal&nbsp;Projects</a>
+    <!--    <a href="/tags/other/" >Other</a> <span class="nav-spacer">&#8226;</span>-->
         
       </p>
-    </nav>    <div class="grid-container">
+    </nav>    <article class="tag-description"> <p>A mix used/unused journal cover illustrations.</p>
+ </article>
+    <div class="grid-container">
       
+                <div class="grid-item">
+                    <a href="/work/single-atom-imaging">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Lens array for single atom imaging</p>
+                          <p class="date">September 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/single-atom-imaging/512w-thumb.jpg"
+                           data-srcset="/work/single-atom-imaging/256w-thumb.jpg 256w,
+                                        /work/single-atom-imaging/512w-thumb.jpg 512w"
+                           alt="Cover illustration of a custom lens array for single atom imaging.">
+                    </a>
+                  </div>
       
           
     </div>
@@ -59,7 +80,7 @@
         });
       </script>  </main>
     <footer>
-      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:info@inform.studio" class="normal-link">info@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
+      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
     </footer>
   </body>
 </html>

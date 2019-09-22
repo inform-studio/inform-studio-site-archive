@@ -5,570 +5,144 @@
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="From journal covers and scientific illustration to technical graphics and explanatory animation, we translate scientific research into clear visual form.">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,500,600&display=swap" rel="stylesheet">-->
     <link href="/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
-      <a href="/index.html"><img src="/images/inform-logo.svg"></a>
+      <a href="/index.html"><img src="/images/logo.svg" id="logo-full"></a>
       <nav>
         <ul>
           
-          <li><a href="/index.html" class="selected">Work</a></li>
+          <li><a href="/work/" >Work</a></li>
+          <li><a href="/blog/" >Blog</a></li>
           <li><a href="/about/" >About</a></li>
           <li><a href="mailto:info@inform.studio">Contact</a></li>
-<!--          <li><a href="/blog/" >Blog</a></li>-->
+          <a href="/index.html"><img src="/images/logo.svg" id="logo-mobile"></a>
         </ul>
       </nav>
-    </header>
-  <main>
-    <nav>
-      <p style="margin-top: 0.5rem; line-height: 1.5rem;">
-      
-        <a href="/index.html" class="tag-selected">All</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
-      
-        <a href="/tags/illustration" >Illustration</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
-      
-        <a href="/tags/animation" >Animation</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
-      
-        <a href="/tags/infographics/" >Infographics</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
-      
-        <a href="/tags/interactive-models/" >Interactive&nbsp;Models</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
-      
-        <a href="/tags/journal-covers/" >Journal&nbsp;Covers</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
-      
-        <a href="/tags/visual-design/" >Visual&nbsp;Design</a> <span style="padding: 0 0.25rem;">&#8226;</span>
-      
-        <a href="/tags/personal-projects/" >Personal&nbsp;Projects</a>
-        
-      </p>
-    </nav>    <div class="grid-container">
-      
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
+    </header>  <main>
+    <h1>Visual Design for Science Communication</h1>
+    <article>Inform Studio is the portfolio website of Sean Kelley, focusing on illustration, animation, and other forms of visual representation for scientific communication.</article>
+    <h2 id="work-header">Latest work</h2>
+      <div class="grid-container index-grid">
+          <div class="grid-item">
+              <a href="/work/liquid-gate-transistor">
+                <div class="spacer"></div>
+                <div class="grid-caption">
+                  <div>
+                    <p>A liquid-gate sensor for Alzheimer’s research</p>
+                    <p class="date">August 2019</p>
+                  </div>
                 </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
+                <img 
+                     src="/work/liquid-gate-transistor/512w-thumb.jpg"
+                     srcset="/work/liquid-gate-transistor/256w-thumb.jpg 256w,
+                                  /work/liquid-gate-transistor/512w-thumb.jpg 512w"
+                     alt="Diagram of a liquid gate device for measuring pH.">
+              </a>
+            </div>
+          <div class="grid-item">
+              <a href="/work/measuring-smokestack-emissions">
+                <div class="spacer"></div>
+                <div class="grid-caption">
+                  <div>
+                    <p>Measuring smokestack emissions</p>
+                    <p class="date">June 2019</p>
+                  </div>
                 </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
+                <video autoplay loop muted playsinline>
+                  <source
+                          src="/work/measuring-smokestack-emissions/thumb.mp4"
+                          type="video/mp4"> 
+                  <img
+                       data-src="/work/measuring-smokestack-emissions/thumb.jpg"
+                       title="Your browser does not support the <video> tag">
+                </video>
+              </a>
+            </div>
+          <div class="grid-item">
+              <a href="/work/measuring-magnetic-bubbles">
+                <div class="spacer"></div>
+                <div class="grid-caption">
+                  <div>
+                    <p>Measuring magnetic bubbles</p>
+                    <p class="date">June 2019</p>
+                  </div>
                 </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
+                <video autoplay loop muted playsinline>
+                  <source
+                          src="/work/measuring-magnetic-bubbles/thumb.mp4"
+                          type="video/mp4"> 
+                  <img
+                       data-src="/work/measuring-magnetic-bubbles/thumb.jpg"
+                       title="Your browser does not support the <video> tag">
+                </video>
+              </a>
+            </div>
+          <div class="grid-item">
+              <a href="/work/interferometer-diagram">
+                <div class="spacer"></div>
+                <div class="grid-caption">
+                  <div>
+                    <p>Principle of measuring distance with an interferometer</p>
+                    <p class="date">May 2019</p>
+                  </div>
                 </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
+                <img 
+                     src="/work/interferometer-diagram/512w-thumb.jpg"
+                     srcset="/work/interferometer-diagram/256w-thumb.jpg 256w,
+                                  /work/interferometer-diagram/512w-thumb.jpg 512w"
+                     alt="Two-panel illustration of an interferometer">
+              </a>
+            </div>
+          <div class="grid-item">
+              <a href="/work/shaping-fast-light-pulses">
+                <div class="spacer"></div>
+                <div class="grid-caption">
+                  <div>
+                    <p>Shaping super-fast light pulses</p>
+                    <p class="date">May 2019</p>
+                  </div>
                 </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
+                <img 
+                     src="/work/shaping-fast-light-pulses/512w-thumb.jpg"
+                     srcset="/work/shaping-fast-light-pulses/256w-thumb.jpg 256w,
+                                  /work/shaping-fast-light-pulses/512w-thumb.jpg 512w"
+                     alt="Schematic showing a technique to reshape the properties of an ultrafast light pulse.">
+              </a>
+            </div>
+          <div class="grid-item">
+              <a href="/work/three-color-metasurface">
+                <div class="spacer"></div>
+                <div class="grid-caption">
+                  <div>
+                    <p>Three colors passing through a metasurface</p>
+                    <p class="date">March 2019</p>
+                  </div>
                 </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
-                </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
-                </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
-                </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-video">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>This is a test of a video page</p>
-                  <p class="date">October 2017</p>
-                </div>
-              </div>
-              <video autoplay loop muted playsinline class="lazy">
-                <source
-                        data-src="/work/test-video/thumb.mp4"
-                        type="video/mp4"> 
-                <img
-                     data-src="/work/test-video/thumb.jpg"
-                     title="Your browser does not support the <video> tag">
-              </video>
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/test-image">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>Magnetic bubbles in domains doing something</p>
-                  <p class="date">October 2016</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/test-image/512w-thumb.jpg"
-                   data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                /work/test-image/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-        <div class="grid-item">
-            <a href="work/quantum-dot-spin-switch">
-              <div class="spacer"></div>
-              <div class="grid-caption">
-                <div>
-                  <p>A quantum dot-based spin switch</p>
-                  <p class="date">October 2015</p>
-                </div>
-              </div>
-              <img class="lazy"
-                   data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                   data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                   alt="This is a test of the subtitle of the image.">
-            </a>
-          </div>
-          
-    </div>
-      
-      <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
-    
-      <script>
-        var lazyLoadInstance = new LazyLoad({
-          elements_selector: ".lazy",
-    //    callback_loaded: (el)=>{console.log("Loaded", el)}
-        });
-      </script>  </main>
+                <img 
+                     src="/work/three-color-metasurface/512w-thumb.jpg"
+                     srcset="/work/three-color-metasurface/256w-thumb.jpg 256w,
+                                  /work/three-color-metasurface/512w-thumb.jpg 512w"
+                     alt="Three separate frequencies of light passing through a metasurface.">
+              </a>
+            </div>
+      </div>    <h2>Latest blog entries</h2>
+          <div class="blog-entry">
+            <article style="margin-bottom: 0;"><a href="/blog/starting-off">Starting off</a></article>
+            <p class="blurb">The start of the blog/journal (we&#x27;ll see how long this lasts)</p>
+            <p class="meta" style="margin-top: 0.2rem;">September 22, 2019
+             &#8226; Tagged: 
+               <a href="/blog/tags#journal">Journal</a>,
+               <a href="/blog/tags#tag-test">Tag Test</a>
+          </p>
+          </div>    <article id="contact-line">Interested in working together? I'd love to hear from you: <a href="mailto:sean@inform.studio">sean@inform.studio</a></article>
+  </main>
     <footer>
-      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:info@inform.studio" class="normal-link">info@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
+      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
     </footer>
   </body>
 </html>

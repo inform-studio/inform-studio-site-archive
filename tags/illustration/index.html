@@ -5,76 +5,369 @@
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="From journal covers and scientific illustration to technical graphics and explanatory animation, we translate scientific research into clear visual form.">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,500,600&display=swap" rel="stylesheet">-->
     <link href="/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
-      <a href="/index.html"><img src="/images/inform-logo.svg"></a>
+      <a href="/index.html"><img src="/images/logo.svg" id="logo-full"></a>
       <nav>
         <ul>
           
-          <li><a href="/index.html" class="selected">Work</a></li>
+          <li><a href="/work/" class="selected">Work</a></li>
+          <li><a href="/blog/" >Blog</a></li>
           <li><a href="/about/" >About</a></li>
           <li><a href="mailto:info@inform.studio">Contact</a></li>
-<!--          <li><a href="/blog/" >Blog</a></li>-->
+          <a href="/index.html"><img src="/images/logo.svg" id="logo-mobile"></a>
         </ul>
       </nav>
-    </header>
-  <main>
+    </header>  <main>
     <nav>
-      <p style="margin-top: 0.5rem; line-height: 1.5rem;">
+      <p>
       
-        <a href="/index.html" >All</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
+        <a href="/work/" >All</a> <span class="nav-spacer">&#8226;</span> 
+        
+        <a href="/work/demo-reel/" >Demo Reel&nbsp;</a> <span class="nav-spacer">&#8226;</span>
       
-        <a href="/tags/illustration" class="tag-selected">Illustration</a> <span style="padding: 0 0.25rem;">&#8226;</span> 
+        <a href="/tags/illustration/" class="tag-selected">Illustration</a> <span class="nav-spacer">&#8226;</span> 
       
-        <a href="/tags/animation" >Animation</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+        <a href="/tags/animation/" >Animation</a> <span class="nav-spacer">&#8226;</span>  
       
-        <a href="/tags/infographics/" >Infographics</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+        <a href="/tags/diagrams/" >Diagrams</a> <span class="nav-spacer">&#8226;</span>
+        
+        <a href="/tags/journal-covers/" >Journal&nbsp;Covers</a> <span class="nav-spacer">&#8226;</span>   
       
-        <a href="/tags/interactive-models/" >Interactive&nbsp;Models</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
+        <a href="/tags/interactive/" >Web / Interactive</a> 
+    
+    <!--    <a href="/tags/personal-projects/" >Personal&nbsp;Projects</a>-->
       
-        <a href="/tags/journal-covers/" >Journal&nbsp;Covers</a> <span style="padding: 0 0.25rem;">&#8226;</span>  
-      
-        <a href="/tags/visual-design/" >Visual&nbsp;Design</a> <span style="padding: 0 0.25rem;">&#8226;</span>
-      
-        <a href="/tags/personal-projects/" >Personal&nbsp;Projects</a>
+    <!--    <a href="/tags/other/" >Other</a> <span class="nav-spacer">&#8226;</span>-->
         
       </p>
-    </nav>    <div class="grid-container">
+    </nav>    <article class="tag-description"> <p>Visualizations of physical phenomena.</p>
+ </article>
+    <div class="grid-container">
       
                 <div class="grid-item">
-                    <a href="/work/test-image">
+                    <a href="/work/three-color-metasurface">
                       <div class="spacer"></div>
                       <div class="grid-caption">
                         <div>
-                          <p>Magnetic bubbles in domains doing something</p>
+                          <p>Three colors passing through a metasurface</p>
+                          <p class="date">March 2019</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/three-color-metasurface/512w-thumb.jpg"
+                           data-srcset="/work/three-color-metasurface/256w-thumb.jpg 256w,
+                                        /work/three-color-metasurface/512w-thumb.jpg 512w"
+                           alt="Three separate frequencies of light passing through a metasurface.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/single-flux-quanta">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Single flux quantum circuit</p>
+                          <p class="date">September 2018</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/single-flux-quanta/512w-thumb.jpg"
+                           data-srcset="/work/single-flux-quanta/256w-thumb.jpg 256w,
+                                        /work/single-flux-quanta/512w-thumb.jpg 512w"
+                           alt="Magnetic lines move along a circuit.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/neutron-flux-monitor">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Calibrating a portable neutron flux monitor</p>
+                          <p class="date">May 2018</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/neutron-flux-monitor/512w-thumb.jpg"
+                           data-srcset="/work/neutron-flux-monitor/256w-thumb.jpg 256w,
+                                        /work/neutron-flux-monitor/512w-thumb.jpg 512w"
+                           alt="Illustration of the four-stage process developed by NIST for measuring neutron flux.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/fractional-hall-effect-graphene">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Fractional quantum Hall effect in graphene</p>
+                          <p class="date">January 2018</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/fractional-hall-effect-graphene/512w-thumb.jpg"
+                           data-srcset="/work/fractional-hall-effect-graphene/256w-thumb.jpg 256w,
+                                        /work/fractional-hall-effect-graphene/512w-thumb.jpg 512w"
+                           alt="Electrons move in circular orbits above a hexagonal graphene surface.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/gallium-nitride-nanowire">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Gallium-nitride nanowire LED</p>
+                          <p class="date">June 2017</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/gallium-nitride-nanowire/512w-thumb.jpg"
+                           data-srcset="/work/gallium-nitride-nanowire/256w-thumb.jpg 256w,
+                                        /work/gallium-nitride-nanowire/512w-thumb.jpg 512w"
+                           alt="Stylized illustration of a gallium-nitride nanowire LED on a silicon substrate.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/rosi-light-reflection">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Robotic optical scattering instrument (ROSI)</p>
+                          <p class="date">February 2017</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/rosi-light-reflection/512w-thumb.jpg"
+                           data-srcset="/work/rosi-light-reflection/256w-thumb.jpg 256w,
+                                        /work/rosi-light-reflection/512w-thumb.jpg 512w"
+                           alt="Diagram of the robotic optical scattering instrument.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/prospect-neutron-detector">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Diagram of PROSPECT neutron detector</p>
+                          <p class="date">December 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/prospect-neutron-detector/512w-thumb.jpg"
+                           data-srcset="/work/prospect-neutron-detector/256w-thumb.jpg 256w,
+                                        /work/prospect-neutron-detector/512w-thumb.jpg 512w"
+                           alt="Cutaway diagram of the PROSPECT neutron detector.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/honeycomb-lattice-bend">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Stylized honeycomb lattice potential</p>
+                          <p class="date">November 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/honeycomb-lattice-bend/512w-thumb.jpg"
+                           data-srcset="/work/honeycomb-lattice-bend/256w-thumb.jpg 256w,
+                                        /work/honeycomb-lattice-bend/512w-thumb.jpg 512w"
+                           alt="Close-up visualization of a “honeycomb” (hexagonal) lattice potential.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/quantum-dots-afm">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Quantum dots on a semiconductor surface</p>
                           <p class="date">October 2016</p>
                         </div>
                       </div>
                       <img class="lazy"
-                           data-src="/work/test-image/512w-thumb.jpg"
-                           data-srcset="/work/test-image/256w-thumb.jpg 256w,
-                                        /work/test-image/512w-thumb.jpg 512w"
-                           alt="This is a test of the subtitle of the image.">
+                           data-src="/work/quantum-dots-afm/512w-thumb.jpg"
+                           data-srcset="/work/quantum-dots-afm/256w-thumb.jpg 256w,
+                                        /work/quantum-dots-afm/512w-thumb.jpg 512w"
+                           alt="White quantum dots sit on an orange semiconductor surface.">
                     </a>
                   </div>
                 <div class="grid-item">
-                    <a href="/work/quantum-dot-spin-switch">
+                    <a href="/work/weyl-semimetal">
                       <div class="spacer"></div>
                       <div class="grid-caption">
                         <div>
-                          <p>A quantum dot-based spin switch</p>
+                          <p>Weyl semimetal band structure</p>
+                          <p class="date">October 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/weyl-semimetal/512w-thumb.jpg"
+                           data-srcset="/work/weyl-semimetal/256w-thumb.jpg 256w,
+                                        /work/weyl-semimetal/512w-thumb.jpg 512w"
+                           alt="A rendering of a semimetal band structure in which bands touch at single points.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/single-atom-imaging">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Lens array for single atom imaging</p>
+                          <p class="date">September 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/single-atom-imaging/512w-thumb.jpg"
+                           data-srcset="/work/single-atom-imaging/256w-thumb.jpg 256w,
+                                        /work/single-atom-imaging/512w-thumb.jpg 512w"
+                           alt="Cover illustration of a custom lens array for single atom imaging.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/rydberg-atoms-optical-lattice">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Rydberg atoms in a 2D optical lattice</p>
+                          <p class="date">March 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/rydberg-atoms-optical-lattice/512w-thumb.jpg"
+                           data-srcset="/work/rydberg-atoms-optical-lattice/256w-thumb.jpg 256w,
+                                        /work/rydberg-atoms-optical-lattice/512w-thumb.jpg 512w"
+                           alt="Pink atoms sit in a blue 2D optical lattice.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/parafermion-mode-bec">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Parafermionic mode in an ultracold bosonic system</p>
+                          <p class="date">February 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/parafermion-mode-bec/512w-thumb.jpg"
+                           data-srcset="/work/parafermion-mode-bec/256w-thumb.jpg 256w,
+                                        /work/parafermion-mode-bec/512w-thumb.jpg 512w"
+                           alt="Two spheres (the parafermion) sit on either side of a short trench containing a cloud of atoms.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/stacked-lenses-single-atom">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Stacked lenses imaging a single atom</p>
+                          <p class="date">January 2016</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/stacked-lenses-single-atom/512w-thumb.jpg"
+                           data-srcset="/work/stacked-lenses-single-atom/256w-thumb.jpg 256w,
+                                        /work/stacked-lenses-single-atom/512w-thumb.jpg 512w"
+                           alt="Stacked lenses collect light from a single atom.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/rf-squid-metamaterial">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>A rf-SQUID based metamaterial</p>
+                          <p class="date">December 2015</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/rf-squid-metamaterial/512w-thumb.jpg"
+                           data-srcset="/work/rf-squid-metamaterial/256w-thumb.jpg 256w,
+                                        /work/rf-squid-metamaterial/512w-thumb.jpg 512w"
+                           alt="An array of circular structures becomes transparent to radio waves.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/optical-attenuator-calibration">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Measuring optical power with single-photon detectors</p>
                           <p class="date">October 2015</p>
                         </div>
                       </div>
                       <img class="lazy"
-                           data-src="/work/quantum-dot-spin-switch/512w-thumb.jpg"
-                           data-srcset="/work/quantum-dot-spin-switch/256w-thumb.jpg 256w,
-                                        /work/quantum-dot-spin-switch/512w-thumb.jpg 512w"
-                           alt="This is a test of the subtitle of the image.">
+                           data-src="/work/optical-attenuator-calibration/512w-thumb.jpg"
+                           data-srcset="/work/optical-attenuator-calibration/256w-thumb.jpg 256w,
+                                        /work/optical-attenuator-calibration/512w-thumb.jpg 512w"
+                           alt="Light from a pulsed laser is directed through a variable attenuator onto a transition edge sensor device.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/solar-spectrum-measurement">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Ground-based solar spectrometer</p>
+                          <p class="date">October 2015</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/solar-spectrum-measurement/512w-thumb.jpg"
+                           data-srcset="/work/solar-spectrum-measurement/256w-thumb.jpg 256w,
+                                        /work/solar-spectrum-measurement/512w-thumb.jpg 512w"
+                           alt="Schematic illustration of a spectrometer with capture optics, integrating sphere, system of gratings, and associated electronics.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/microfluidic-diamond-sensor">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>A microfluidic diamond magnetometer</p>
+                          <p class="date">February 2015</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/microfluidic-diamond-sensor/512w-thumb.jpg"
+                           data-srcset="/work/microfluidic-diamond-sensor/256w-thumb.jpg 256w,
+                                        /work/microfluidic-diamond-sensor/512w-thumb.jpg 512w"
+                           alt="A diamond nanocrystal is used to map the magnetic field around a particle.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/chiral-spin-superfluid">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>A spontaneous chiral spin superfluid</p>
+                          <p class="date">October 2014</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/chiral-spin-superfluid/512w-thumb.jpg"
+                           data-srcset="/work/chiral-spin-superfluid/256w-thumb.jpg 256w,
+                                        /work/chiral-spin-superfluid/512w-thumb.jpg 512w"
+                           alt="The spontaneous chiral spin superfluid.">
+                    </a>
+                  </div>
+                <div class="grid-item">
+                    <a href="/work/thermal-light">
+                      <div class="spacer"></div>
+                      <div class="grid-caption">
+                        <div>
+                          <p>Sub-wavelength interference with thermal light</p>
+                          <p class="date">October 2014</p>
+                        </div>
+                      </div>
+                      <img class="lazy"
+                           data-src="/work/thermal-light/512w-thumb.jpg"
+                           data-srcset="/work/thermal-light/256w-thumb.jpg 256w,
+                                        /work/thermal-light/512w-thumb.jpg 512w"
+                           alt="Light passes through a pair of slits, producing an interference pattern.">
                     </a>
                   </div>
       
@@ -91,7 +384,7 @@
         });
       </script>  </main>
     <footer>
-      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:info@inform.studio" class="normal-link">info@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
+      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
     </footer>
   </body>
 </html>
