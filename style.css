@@ -391,7 +391,7 @@ hr {
   header, main nav {
     padding:0 0.35rem;
   }
-  footer, h1, h2, article, .meta, .description, .blurb {
+  footer, h1, article, .meta, .description, .blurb {
     padding:0 0.25rem;
   }
   article {
@@ -408,7 +408,7 @@ hr {
     line-height: 1.35rem;
   }
 */
-  .description, article p, article ul, article l, .blurb {
+  .description, article p, article ul, article l, .blurb, .padded-mobile {
     font-size: 0.85rem;
     line-height: 1.2rem;
   }
