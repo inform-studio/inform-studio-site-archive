@@ -57,6 +57,9 @@ nav a {
 nav li a:hover {
   border-bottom: 2px solid #231F20;
 }
+main nav a:hover {
+  border-bottom: 1px solid #231F20;
+}
 nav a {
   border-bottom: none;
 }
