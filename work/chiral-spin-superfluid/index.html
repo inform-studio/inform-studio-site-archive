@@ -6,31 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="From journal covers and scientific illustration to technical graphics and explanatory animation, we translate scientific research into clear visual form.">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500" rel="stylesheet">
-    <link href="/style.css" rel="stylesheet" type="text/css">
+    <link href="/tachyons.min.css" rel="stylesheet" type="text/css">
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      html { font-family: 'Inter', sans-serif;}
+      p, li {line-height: 1.3;}
+      @media (min-width: 60em){
+        p, li {line-height: 1.5;}
+        .dark-gray-l {
+          color: #333333;
+        }
+        h4 {
+         margin-top: 2rem !important;
+         font-size: 1rem !important;
+         font-weight: 500 !important;;
+        }
+        .bg-black-90-l {
+          background-color: white;
+        }
+        ul, ol {
+          padding-left: 1.6rem;
+        }
+      }
+      @supports (font-variation-settings: normal) {
+        html { font-family: 'Inter var', sans-serif; }
+      }
+      .fade-in {
+        opacity: 0;
+      }
+      .fade-in:hover {
+        opacity: 1;
+      }
+      a {
+        color: #357EDD;
+      }
+      h4 {
+        font-weight: 600;
+        margin-top: 1.5rem;
+        font-size: .85rem;
+      }
+      .card-shadow {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+      }
+      .index-box {
+        padding-bottom: 100%;
+      }
+      .bg-black-90-l {
+        background-color: rgba(0,0,0,.9);
+      }
+      ul, ol {
+        padding-left: 1rem;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <a href="/index.html"><img src="/images/logo.svg" id="logo-full"></a>
+  <body class="w-100 center dark-gray"><header class="pl4-l pr3-l pr2 pl2 fl-l mt3">
+      <h1 class="f4 fw3 dn db-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
+      <div class="fl-l mr5-l">
       <nav>
-        <ul>
+        <ul class="list pl0 mt0 mt3-l mb0 mb3-l">
           
-          <li><a href="/work/" class="selected">Work</a></li>
-          <li><a href="/blog/" >Blog</a></li>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="mailto:info@inform.studio">Contact</a></li>
-          <a href="/index.html"><img src="/images/logo.svg" id="logo-mobile"></a>
+          <li class="dib db-l">
+            <a href="/work/" class="f4 link dim dark-gray-l 
+              gray"
+              style="font-weight: 600; color: black;"
+              >Work</a></li>
+          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
+            <a href="/blog/" class="f4 link dim dark-gray-l
+               gray"
+               
+               >Blog</a></li>
+          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
+            <a href="/about/" class="f4 link dim dark-gray-l
+               gray"
+               
+               >About</a></li>
+          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
+            <a class="f4 link dim dark-gray-l 
+              gray" href="mailto:info@inform.studio">Contact</a></li>
         </ul>
-      </nav>
-    </header>  <main>
-    <h1>A spontaneous chiral spin superfluid</h1>
+      </nav><div class="dn db-l"><nav class="fl">
+  <ul class="list pl0">
+  
+    <li class="dib db-l mr2"><a class="f5 link dim dark-gray-l gray" href="/work/" >All</a>
+    
+    </li>
+    
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/work/demo-reel/" >Demo Reel</a></li>
+  
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/illustration/" >Illustration</a>
+    </li>
+  
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/animation/" >Animation</a>
+    </li>
+  
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/diagrams/" >Diagrams</a>
+    </li>
+    
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/journal-covers/" >Journal&nbsp;Covers</a>
+    </li>
+  
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/interactive/" >Web / Interactive</a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  
+  
+  
+</nav></div></div>
+</header>
+  <main class=" mw8 fl mt3-l mt0">
+    <h1 class="f4 fw4 mb4-l pl3-l pr3-l pr2 pl2">A spontaneous chiral spin superfluid</h1>
+    <div class="pl3-l pr3-l">
     <img src="large.jpg"
          srcset= "large.jpg 1811w, medium.jpg 906w, small.jpg 480w"
          alt="The spontaneous chiral spin superfluid."
-         class="full-image"
+         class="w-100"
          style="max-width: 900px">
-    <p class="description">The spontaneous chiral spin superfluid. When ultracold atomic spins are loaded into a hexagonal lattice, chiral spin currents are expected to develop. Here, the orange represents spin-up particles, and green spin-down. Arrows are used to guide the eye along the path of movement.</p>
-    <p class="meta">
+    </div>
+    <p class="mw7 f6 pl3-l pr3-l pr2 pl2">The spontaneous chiral spin superfluid. When ultracold atomic spins are loaded into a hexagonal lattice, chiral spin currents are expected to develop. Here, the orange represents spin-up particles, and green spin-down. Arrows are used to guide the eye along the path of movement.</p>
+    <p class="f7 pl3-l pr3-l pr2 pl2">
       October 2014
        &#8226; JQI
        &#8226; <a href="https://jqi.umd.edu/news/restoring-order">https://jqi.umd.edu/news/restoring-order</a>
@@ -38,14 +138,13 @@
        <a href="/tags/illustration">Illustration</a>,
        <a href="/tags/diagrams">Diagrams</a>
     </p>
-    <article>
-      <h2 id="project-notes">Project Notes</h2>
-      <p>Looking over this again (Aug 2019), the honeycomb lattice inset in the top <em>should not</em> be squashed like that...kicking myself over that one. Also, not entirely sure what I was thinking with this color scheme. Painful.</p>
-
-    </article>
-  </main>
-    <footer>
-      Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
-    </footer>
-  </body>
+    <div class="mw6 pl3-l pr3-l pr2 pl2">
+      <h4>Notes</h4>
+      <div class="f5-l f6"><p>Looking over this again (Aug 2019), the honeycomb lattice inset in the top <em>should not</em> be squashed like that...kicking myself over that one. Also, not entirely sure what I was thinking with this color scheme. Painful.</p>
+</div>
+    </div>
+        <footer class="f7 mt4-l mt3 mb2 mb3-l pl3-l pr3-l pr2 pl2">
+          <a href="/">Inform Studio</a> &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
+        </footer>      </main>
+</body>
 </html>
