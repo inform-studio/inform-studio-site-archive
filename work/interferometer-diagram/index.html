@@ -58,6 +58,22 @@
       ul, ol {
         padding-left: 1rem;
       }
+      
+      /* Styling for lazy loaded images */
+
+      .lazy {
+        opacity:0;
+        transition: opacity 1s;
+      }
+
+      .lazy.initial {
+        transition: none !important;
+      }
+      .lazy.initial,
+      .lazy.loaded,
+      .lazy.error {
+        opacity: 1 !important;
+      }
     </style>
   </head>
   <body class="w-100 center dark-gray"><header class="pl4-l pr3-l pr2 pl2 fl-l mt3">
