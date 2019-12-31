@@ -11,7 +11,21 @@
       @import url('https://rsms.me/inter/inter.css');
       html { font-family: 'Inter', sans-serif;}
       p, li {line-height: 1.3;}
+      .contents p, .contents h4, .contents ul, .contents ol {
+          padding-left: .5rem;
+          padding-right: .5rem;
+        }
+      .contents ul, .contents ol {
+        padding-left: 1.5rem;
+      }
       @media (min-width: 60em){
+        .contents p, .contents h4, .contents ul, .contents ol {
+          padding-left: 0rem;
+          padding-right: 0rem;
+        }
+        .contents ul, .contents ol {
+          padding-left: 1.5rem;
+        }
         p, li {line-height: 1.5;}
         .dark-gray-l {
           color: #333333;
@@ -25,8 +39,9 @@
           background-color: white;
         }
         ul, ol {
-          padding-left: 1.6rem;
+          padding-left: 1.5rem;
         }
+        .note
       }
       @supports (font-variation-settings: normal) {
         html { font-family: 'Inter var', sans-serif; }
