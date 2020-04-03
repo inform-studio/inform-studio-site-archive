@@ -11,7 +11,7 @@
       @import url('https://rsms.me/inter/inter.css');
       html { font-family: 'Inter', sans-serif;}
       p, li {line-height: 1.3;}
-      .contents *:not(img) {
+      .contents *:not(img):not(a):not(li):not(ol):not(ul) {
           padding-left: .5rem;
           padding-right: .5rem;
         }
@@ -19,18 +19,22 @@
         padding-left: 1.5rem;
       }
       @media (min-width: 60em){
-        .contents *:not(img) {
+        .contents *:not(img):not(a):not(li):not(ol):not(ul) {
           padding-left: 0rem;
           padding-right: 0rem;
           max-width: 32rem;
         }
-/*
+/
         .contents img {
           max-width: 40rem;
         }
 */
-        .contents ul, .contents ol {
-          padding-left: 1.5rem;
+        .contents ul {
+          list-style-type: none;
+        }
+        
+        .contents ol {
+          padding-left: 1rem !important;
         }
         p, li {line-height: 1.5;}
         .dark-gray-l {
@@ -61,11 +65,17 @@
       a {
         color: #357EDD;
       }
+      h3 {
+        font-weight: 500 !important;
+      }
       h4 {
         font-weight: 600;
         margin-top: 1.5rem;
         font-size: .85rem;
         margin-bottom: .5rem;
+      }
+      .detail {
+        max-width: 220px;
       }
       .card-shadow {
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -79,6 +89,10 @@
       }
       ul, ol {
         padding-left: 1rem;
+      }
+      
+      .underlined {
+        border-bottom: 1px solid #333333;
       }
       
       /* Styling for lazy loaded images */
@@ -98,40 +112,50 @@
       }
     </style>
   </head>
-  <body class="w-100 center dark-gray"><header class="pl4-l pr3-l pr2 pl2 fl-l mt3">
-      <h1 class="f4 fw3 dn db-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
-      <div class="fl-l mr5-l">
+  <body class="w-100 center dark-gray"><header class="pl4-l pr0-l pr2 pl2 fl-l mt3">
+      <h1 class="f4 fw3 dn db-l mb4-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
+      <p class="f6 mw5 dn db-l">Visual Design for Scientific Communication</p>
+      <div class="fl-l">
       <nav>
-        <ul class="list pl0 mt0 mt3-l mb0 mb3-l">
+        <ul class="list pl0 mt0 mt3-l mb0 mb4-l">
           
           <li class="dib db-l">
             <a href="/work/" class="f4 link dim dark-gray-l 
               gray"
               
               >Work</a></li>
+              
+<!--
           <li class="mt2-l mt0 ml3 ml0-l dib db-l">
             <a href="/blog/" class="f4 link dim dark-gray-l
                gray"
                
                >Blog</a></li>
-          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
-            <a href="/about/" class="f4 link dim dark-gray-l
+-->
+          <li class="mt3-l mt0 ml3 ml0-l dib db-l">
+            <a href="/about/" class="f4 link dim dark-gray-l  underlined 
                gray"
-               style="font-weight: 600; color: black;"
+               style="font-weight: 500; color: black;"
                >About</a></li>
-          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
-            <a class="f4 link dim dark-gray-l 
-              gray" href="mailto:info@inform.studio">Contact</a></li>
+<!--
+           <li class="mt4-l mt0 ml3 ml0-l dib db-l">
+            <a href="mailto:sean@inform.studio" class="f4 link dim dark-gray-l underlined
+               gray"
+               >Contact</a></li>                                                               
+-->
         </ul>
+        <p class="f7 mw5 dn db-l">Inform Studio &#8226; Salisbury MD USA  <a href="mailto:sean@inform.studio" class="">sean@inform.studio</a></p>
       </nav></div>
 </header>
-  <main class="mw8 fl mt3-l mt0 pl4-l">
-    <div class="pr3-l pl3-l">
-    <h1 class="f4 fw4 mb4-l pr2 pl2 pr0-l pl0-l">Hi! I&#x27;m Sean Kelley.</h1>
-    <article class="mw6 f5-l f6 contents"><img src="/images/me.jpg" class="w-100">
+  <main class="mw8 fl mt3-l mt0 pl3-l">
+    <div class="pr3-l">
+    <h1 class="f4 fw4 mb4-l pr2 pl2 pr0-l pl0-l dn db-l">About</h1>
+    <article class="mw6 f6-l f6 contents static-list"><h3 id="hi-my-name-is-sean-kelley">Hi! My name is Sean Kelley.</h3>
+<img src="/images/headshot.jpg" class="fr ml4 mb4">
 
-<p>I help scientists, researchers, and other folks in technical fields translate their work into clear visual form. </p>
-<p>I&#39;ve had the pleasure of collaborating with:</p>
+<p>I help scientists, researchers, and other folks in technical fields communicate their results clearly and effectively.</p>
+<p>Inform Studio is my design studio specializing in scientific communication. From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form.</p>
+<h4 id="ive-collaborated-with">I&#39;ve collaborated with:</h4>
 <ul>
 <li>The National Institute of Standards and Technologies</li>
 <li>The Joint Quantum Institute</li>
@@ -141,14 +165,10 @@
 <li>The University of Maryland</li>
 <li>Science News</li>
 </ul>
-<h4 id="about-the-site">About the site</h4>
-<p>This website is a combination portfolio, journal, and catalog of past work (for my poor memory). The name of the site was strongly influenced by the fact that the domain was available.</p>
-<h4 id="contact">Contact</h4>
-<p>Interested in working together? The best way to contact me is through email: <a href="mailto:sean@inform.studio">sean@inform.studio</a>. I&#39;m also on instagram <a href="https://www.instagram.com/inform.studio/">@inform.studio</a>.</p>
+<h4 id="interested-in-working-together">Interested in working together?</h4>
+<p>The best way to contact me is through email: <a href="mailto:sean@inform.studio">sean@inform.studio</a>.</p>
 </article>
     </div>
-        <footer class="f7 mt4-l mt3 mb2 mb3-l pl3-l pr3-l pr2 pl2">
-          <a href="/">Inform Studio</a> &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
-        </footer>  </main>
+  </main>
 </body>
 </html>

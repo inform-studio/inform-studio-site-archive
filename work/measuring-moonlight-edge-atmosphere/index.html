@@ -11,7 +11,7 @@
       @import url('https://rsms.me/inter/inter.css');
       html { font-family: 'Inter', sans-serif;}
       p, li {line-height: 1.3;}
-      .contents *:not(img) {
+      .contents *:not(img):not(a):not(li):not(ol):not(ul) {
           padding-left: .5rem;
           padding-right: .5rem;
         }
@@ -19,18 +19,22 @@
         padding-left: 1.5rem;
       }
       @media (min-width: 60em){
-        .contents *:not(img) {
+        .contents *:not(img):not(a):not(li):not(ol):not(ul) {
           padding-left: 0rem;
           padding-right: 0rem;
           max-width: 32rem;
         }
-/*
+/
         .contents img {
           max-width: 40rem;
         }
 */
-        .contents ul, .contents ol {
-          padding-left: 1.5rem;
+        .contents ul {
+          list-style-type: none;
+        }
+        
+        .contents ol {
+          padding-left: 1rem !important;
         }
         p, li {line-height: 1.5;}
         .dark-gray-l {
@@ -61,11 +65,17 @@
       a {
         color: #357EDD;
       }
+      h3 {
+        font-weight: 500 !important;
+      }
       h4 {
         font-weight: 600;
         margin-top: 1.5rem;
         font-size: .85rem;
         margin-bottom: .5rem;
+      }
+      .detail {
+        max-width: 220px;
       }
       .card-shadow {
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -79,6 +89,10 @@
       }
       ul, ol {
         padding-left: 1rem;
+      }
+      
+      .underlined {
+        border-bottom: 1px solid #333333;
       }
       
       /* Styling for lazy loaded images */
@@ -98,39 +112,28 @@
       }
     </style>
   </head>
-  <body class="w-100 center dark-gray"><header class="pl4-l pr3-l pr2 pl2 fl-l mt3">
-      <h1 class="f4 fw3 dn db-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
-      <div class="fl-l mr5-l">
+  <body class="w-100 center dark-gray"><header class="pl4-l pr0-l pr2 pl2 fl-l mt3">
+      <h1 class="f4 fw3 dn db-l mb4-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
+      <p class="f6 mw5 dn db-l">Visual Design for Scientific Communication</p>
+      <div class="fl-l">
       <nav>
-        <ul class="list pl0 mt0 mt3-l mb0 mb3-l">
+        <ul class="list pl0 mt0 mt3-l mb0 mb4-l">
           
           <li class="dib db-l">
-            <a href="/work/" class="f4 link dim dark-gray-l 
+            <a href="/work/" class="f4 link dim dark-gray-l underlined
               gray"
-              style="font-weight: 600; color: black;"
+              style="font-weight: 500; color: black;"
               >Work</a></li>
-          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
-            <a href="/blog/" class="f4 link dim dark-gray-l
-               gray"
-               
-               >Blog</a></li>
-          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
-            <a href="/about/" class="f4 link dim dark-gray-l
-               gray"
-               
-               >About</a></li>
-          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
-            <a class="f4 link dim dark-gray-l 
-              gray" href="mailto:info@inform.studio">Contact</a></li>
-        </ul>
-      </nav><div class="dn db-l"><nav class="fl">
-  <ul class="list pl0">
+                <nav class="mb4 dn db-l">
+  <ul class="list pl0 pt2-l">
   
-    <li class="dib db-l mr2"><a class="f5 link dim dark-gray-l gray" href="/work/" >All</a>
+    <li class="dib db-l mr2 mt1-l">
+<!--      <a class="f5 link dim dark-gray-l gray" href="/work/" >All</a>-->
     
     </li>
     
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/work/demo-reel/" >Demo Reel</a></li>
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/work/demo-reel/" >Demo Reel</a>
+    </li>
   
     <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/illustration/" >Illustration</a>
     </li>
@@ -156,7 +159,28 @@
   
   
   
-</nav></div></div>
+</nav> 
+<!--
+          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
+            <a href="/blog/" class="f4 link dim dark-gray-l
+               gray"
+               
+               >Blog</a></li>
+-->
+          <li class="mt3-l mt0 ml3 ml0-l dib db-l">
+            <a href="/about/" class="f4 link dim dark-gray-l 
+               gray"
+               
+               >About</a></li>
+<!--
+           <li class="mt4-l mt0 ml3 ml0-l dib db-l">
+            <a href="mailto:sean@inform.studio" class="f4 link dim dark-gray-l underlined
+               gray"
+               >Contact</a></li>                                                               
+-->
+        </ul>
+        <p class="f7 mw5 dn db-l">Inform Studio &#8226; Salisbury MD USA  <a href="mailto:sean@inform.studio" class="">sean@inform.studio</a></p>
+      </nav></div>
 </header>
   <main class="w-100  mw8 fl mt3-l mt0">
     <h1 class="f4 fw4 mb4-l pl3-l pr3-l pr2 pl2">Measuring Moonlight from the Edge of the Atmosphere</h1>
@@ -176,7 +200,7 @@
       </div>
       <script src="https://player.vimeo.com/api/player.js"></script>    </div>
     <p class="mw7 f6 pl3-l pr3-l pr2 pl2">Researchers want to accurately measure the spectrum of moonlight so that the moon can be used as a reference to calibrate satellite imagers. However, measuring this spectrum from the ground is challenging because the atmosphere distorts the moonlight, shifting the spectrum. This animation illustrates the NIST team&#x27;s solution, which is to place the measurement equipment in a high altitude plane called the ER-2 and take the spectrum measurement above 95% of Earth&#x27;s atmosphere.</p>
-    <p class="f7 pl3-l pr3-l pr2 pl2">
+     <p class="f7 pl3-l pr3-l pr2 pl2">
       November 2019
        &#8226; NIST
        &#8226; <a href="https://www.nist.gov/news-events/news/2019/11/fly-me-partway-moon">https://www.nist.gov/news-events/news/2019/11/fly-me-partway-moon</a>
@@ -184,12 +208,12 @@
        <a href="/tags/animation">Animation</a>
     </p>
     <div class="mw6 pl3-l pr3-l">
-      <h4 class="pl0-l pr0-l pr2 pl2">Notes</h4>
-      <div class="f5-l f6 contents"><p>This animation, aside from the 3D telescope rotation, was created entirely in Keynote, mostly using Magic Move (and occasionally more longer build sequences). The <a href="https://drive.google.com/file/d/1kezGSWJJ0LsTJrsrmyntqGBXovo5wObH/view?usp=sharing">project file is available</a> if you&#39;d like to poke around. </p>
+      <h5 class="pl0-l pr0-l pr2 pl2 mb2">Notes</h5>
+      <div class="f6-l f7 contents"><p>This animation, aside from the 3D telescope rotation, was created entirely in Keynote, mostly using Magic Move (and occasionally more longer build sequences). The <a href="https://drive.google.com/file/d/1kezGSWJJ0LsTJrsrmyntqGBXovo5wObH/view?usp=sharing">project file is available</a> if you&#39;d like to poke around. </p>
 </div>
     </div>
-        <footer class="f7 mt4-l mt3 mb2 mb3-l pl3-l pr3-l pr2 pl2">
-          <a href="/">Inform Studio</a> &#8226; Salisbury MD USA &#8226; <a href="mailto:sean@inform.studio" class="normal-link">sean@inform.studio</a> &#8226; <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a>
-        </footer>      </main>
+            <footer class="f7 mt4-l mt3 mb2 mb3-l pl3-l pr3-l pr2 pl2">
+              <a href="/about/copyright.html" class="">Copyright&nbsp;Information</a> &#8226; Questions about the artwork? Contact <a href="mailto:sean@inform.studio" class="">sean@inform.studio</a>.
+            </footer>      </main>
 </body>
 </html>
