@@ -1,66 +1,25 @@
 <!DOCTYPE HTML>
 <html lang = "en">
-  <head>
-    <title>Inform Studio – Science Illustration and Animation</title>
-    <meta charset = "UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="From journal covers and scientific illustration to technical graphics and explanatory animation, we translate scientific research into clear visual form.">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="/tachyons.min.css" rel="stylesheet" type="text/css">
-    <style>
+<head>
+  <title>Inform Studio</title>
+  <meta charset = "UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/tachyons.min.css">
+  <style>
+    @import url('https://rsms.me/inter/inter.css');
+    html { font-family: 'Inter', sans-serif; line-height: 1.5;}
+    .contents :not(img) {
+      max-width: 30em;
+    }
+    .fade-in {
+        opacity: 0;
+      }
+    .fade-in:hover {
+        opacity: 1;
+      }
       @import url('https://rsms.me/inter/inter.css');
-      html { font-family: 'Inter', sans-serif;}
-      p, li {line-height: 1.3;}
-      .contents *:not(img):not(a):not(li):not(ol):not(ul) {
-          padding-left: .5rem;
-          padding-right: .5rem;
-        }
-      .contents ul, .contents ol {
-        padding-left: 1.5rem;
-      }
-      .title-margin {
-          margin-top: 0;
-          float: left;
-        }
-      @media (min-width: 60em){
-        .title-margin {
-          margin-top: 0.67em;
-          float: none;
-        }
-        .contents *:not(img):not(a):not(li):not(ol):not(ul) {
-          padding-left: 0rem;
-          padding-right: 0rem;
-          max-width: 32rem;
-        }
-/
-        .contents img {
-          max-width: 40rem;
-        }
-*/
-        .contents ul {
-          list-style-type: none;
-        }
-        
-        .contents ol {
-          padding-left: 1rem !important;
-        }
-        p, li {line-height: 1.5;}
-        .dark-gray-l {
-          color: #333333;
-        }
-        h4 {
-         margin-top: 2rem !important;
-         font-size: 1rem !important;
-         font-weight: 500 !important;;
-        }
-        .bg-black-90-l {
-          background-color: white;
-        }
-        ul, ol {
-          padding-left: 1rem;
-        }
-        .note
-      }
       @supports (font-variation-settings: normal) {
         html { font-family: 'Inter var', sans-serif; }
       }
@@ -70,39 +29,7 @@
       .fade-in:hover {
         opacity: 1;
       }
-      a {
-        color: #357EDD;
-      }
-      h3 {
-        font-weight: 500 !important;
-      }
-      h4 {
-        font-weight: 600;
-        margin-top: 1.5rem;
-        font-size: .85rem;
-        margin-bottom: .5rem;
-      }
-      .detail {
-        max-width: 220px;
-      }
-      .card-shadow {
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
-      }
-      .index-box {
-        padding-bottom: 100%;
-      }
-      .bg-black-90-l {
-        background-color: rgba(0,0,0,.9);
-      }
-      ul, ol {
-        padding-left: 1rem;
-      }
-      
-      .underlined {
-        border-bottom: 1px solid #333333;
-      }
-      
+    
       /* Styling for lazy loaded images */
 
       .lazy {
@@ -119,141 +46,93 @@
         opacity: 1 !important;
       }
     </style>
-  </head>
-  <body class="w-100 center dark-gray"><header class="pl4-l pr0-l pr2 pl2 fl-l mt3">
-      <h1 class="f4-l f5 fw3 mb4-l mb1-l title-margin mb0 pt1 pt0-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
-<!--      <p class="f6-l f7 mw5 dn db-l">Visual Design for Scientific Communication</p>-->
-      <div class="fl-l fr mr2 mr0-l">
-      <nav>
-        <ul class="list pl0 mt0 mb0 mb4-l">
-          
-          <li class="dib db-l">
-            <a href="/work/" class="f4 link dim dark-gray-l underlined
-              gray"
-              style="font-weight: 500; color: black;"
-              >Work</a></li>
-               <div class="dn db-l"><nav class="mb4 dn db-l">
-  <ul class="list pl0 pt2-l">
-  
-    <li class="dib db-l mr2 mt1-l">
-<!--      <a class="f5 link dim dark-gray-l gray" href="/work/" >All</a>-->
-    
-    </li>
-    
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/work/demo-reel/" >Demo Reel</a>
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/illustration/" >Illustration</a>
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/animation/" >Animation</a>
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/diagrams/" >Diagrams</a>
-    </li>
-    
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/journal-covers/" style="font-weight: 500; border-bottom: 1px solid #333333; color: black;">Journal&nbsp;Covers</a>
-      <p class="f6 detail mt2 dn db-l">A mix of used and unused illustrations submitted for consideration as journal covers.</p>
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/interactive/" >Web / Interactive</a>
-    </li>
-    
-  </ul>
-  
-  
-  
-  
-  
-  
-      <p class="f6 mw6 db dn-l">A mix of used and unused illustrations submitted for consideration as journal covers.</p>
-  
-  
-</nav> </div>
-<!--
-          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
-            <a href="/blog/" class="f4 link dim dark-gray-l
-               gray"
-               
-               >Blog</a></li>
--->
-          <li class="mt3-l mt0 ml3 ml0-l dib db-l">
-            <a href="/about/" class="f4 link dim dark-gray-l 
-               gray"
-               
-               >About</a></li>
-<!--
-           <li class="mt4-l mt0 ml3 ml0-l dib db-l">
-            <a href="mailto:sean@inform.studio" class="f4 link dim dark-gray-l underlined
-               gray"
-               >Contact</a></li>                                                               
--->
-        </ul>
-        <p class="f7 mw5 dn db-l">Inform Studio &#8226; Salisbury MD USA  <a href="mailto:sean@inform.studio" class="">sean@inform.studio</a></p>
-      </nav>  </div>
-</header>
-  <main class="mw8 fl mt3-l mt2">
-    <h1 class="f4 fw4 mb3-l dn db-l pl3">Journal Covers</h1>
+  </head><body class="w-100 black-90 f6 relative pa3-l pa1 mw8 center">
+  <main>
+    <div class="mw6 pl3-l">
+      <div id="title">
+        <h2 class="mb0 f5 fw4 mt3">Inform Studio</h2>
+        <h3 class="f3-l f4 fw4 mb4 mt1">Visual Design for Scientific Communication</h3>
+      </div>
+      <div id="about">
+        <img src="/images/headshot.jpg" class="br-100 h4 fl mr4 w4 dib mb3 ba b--dark-gray">
+        <p class="f4 fw4">Hi! I'm Sean Kelley.</p>
+        <p class="mt2 measure">I help scientists, researchers, and other folks in technical fields communicate their results clearly and effectively.</p>
+        <p class="measure">Inform Studio is my design studio specializing in scientific communication. From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form.</p>
+        <p class="measure">Interested in working together? I'd love to hear from you: <a class="bg-animate hover-bg-light-gray" href="mailto:sean@inform.studio" class="">sean@inform.studio</a>.</p>
+      </div>
+    </div>
+    <div class="pl3-l">
+      <p class="f4 fw4 pt4-l pt3 mb0 bb mr3" id="work">Journal Covers</p>
+      <p class="mb0 fl mt3-l mt2 pr3">Filter by category:</p>
+      <ul class="list pl0 mt3-l mt2">
+        <li class="dib pr3"><a class="link bg-animate hover-bg-light-gray " href="/">All</a></li>
+        <li class="dib pr3"><a class="link bg-animate hover-bg-light-gray " href="/tags/illustration">Illustration</a></li>
+        <li class="dib pr3"><a class="link bg-animate hover-bg-light-gray " href="/tags/animation">Animation</a></li>
+        <li class="dib pr3"><a class="link bg-animate hover-bg-light-gray " href="/tags/diagrams">Diagrams</a></li>
+        <li class="dib pr3"><a class="link bg-animate hover-bg-light-gray  bb fw5 black " href="/tags/journal-covers">Journal Covers</a></li>
+        <li class="dib pr3"><a class="link bg-animate hover-bg-light-gray " href="/tags/interactive">Interactive</a></li>
+      </ul>
+    </div>
     <div class="flex flex-wrap">
-  
-            <div class="w-third pa3-l pa0 relative overflow-hidden ma0">
-              <a class="link black" href="/work/shaping-light-metasurface">
-                <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
-                  <div class="w-100 pa1 bg-white">
-                    <p class="f6">Shaping light with a metasurface</p>
-                    <p class="f7">April 2019</p>
-                  </div>
-                </div>
-                <img class="db lazy w-100"
-                     data-src="/work/shaping-light-metasurface/512w-thumb.jpg"
-                     data-srcset="/work/shaping-light-metasurface/256w-thumb.jpg 256w,
-                                  /work/shaping-light-metasurface/512w-thumb.jpg 512w"
-                     alt="Artistic interpretation of an ultrafast light pulse passing through a metasurface.">
-              </a>
-            </div>
-            <div class="w-third pa3-l pa0 relative overflow-hidden ma0">
-              <a class="link black" href="/work/entanglement-generation-ring-resonator">
-                <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
-                  <div class="w-100 pa1 bg-white">
-                    <p class="f6">Entanglement generation with a ring resonator</p>
-                    <p class="f7">February 2019</p>
-                  </div>
-                </div>
-                <img class="db lazy w-100"
-                     data-src="/work/entanglement-generation-ring-resonator/512w-thumb.jpg"
-                     data-srcset="/work/entanglement-generation-ring-resonator/256w-thumb.jpg 256w,
-                                  /work/entanglement-generation-ring-resonator/512w-thumb.jpg 512w"
-                     alt="Illustration of a ring resonator producing pairs of blue and red photons.">
-              </a>
-            </div>
-            <div class="w-third pa3-l pa0 relative overflow-hidden ma0">
-              <a class="link black" href="/work/single-atom-imaging">
-                <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
-                  <div class="w-100 pa1 bg-white">
-                    <p class="f6">Lens array for single atom imaging</p>
-                    <p class="f7">September 2016</p>
-                  </div>
-                </div>
-                <img class="db lazy w-100"
-                     data-src="/work/single-atom-imaging/512w-thumb.jpg"
-                     data-srcset="/work/single-atom-imaging/256w-thumb.jpg 256w,
-                                  /work/single-atom-imaging/512w-thumb.jpg 512w"
-                     alt="Cover illustration of a custom lens array for single atom imaging.">
-              </a>
-            </div>
-  
       
-</div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
-
-  <script>
-    var lazyLoadInstance = new LazyLoad({
-      elements_selector: ".lazy",
-//    callback_loaded: (el)=>{console.log("Loaded", el)}
-    });
-  </script> 
-  </main>
-  </body>
-</html>
+                <div class="w-third pa3-l pa1 relative overflow-hidden ma0">
+                  <a class="link black" href="/work/shaping-light-metasurface">
+                    <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
+                      <div class="w-100 pa1 bg-white">
+                        <p class="f6">Shaping light with a metasurface</p>
+                        <p class="f7">April 2019</p>
+                      </div>
+                    </div>
+                    <img class="db lazy w-100"
+                         data-src="/work/shaping-light-metasurface/512w-thumb.jpg"
+                         data-srcset="/work/shaping-light-metasurface/256w-thumb.jpg 256w,
+                                      /work/shaping-light-metasurface/512w-thumb.jpg 512w"
+                         alt="Artistic interpretation of an ultrafast light pulse passing through a metasurface.">
+                  </a>
+                </div>
+                <div class="w-third pa3-l pa1 relative overflow-hidden ma0">
+                  <a class="link black" href="/work/entanglement-generation-ring-resonator">
+                    <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
+                      <div class="w-100 pa1 bg-white">
+                        <p class="f6">Entanglement generation with a ring resonator</p>
+                        <p class="f7">February 2019</p>
+                      </div>
+                    </div>
+                    <img class="db lazy w-100"
+                         data-src="/work/entanglement-generation-ring-resonator/512w-thumb.jpg"
+                         data-srcset="/work/entanglement-generation-ring-resonator/256w-thumb.jpg 256w,
+                                      /work/entanglement-generation-ring-resonator/512w-thumb.jpg 512w"
+                         alt="Illustration of a ring resonator producing pairs of blue and red photons.">
+                  </a>
+                </div>
+                <div class="w-third pa3-l pa1 relative overflow-hidden ma0">
+                  <a class="link black" href="/work/single-atom-imaging">
+                    <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
+                      <div class="w-100 pa1 bg-white">
+                        <p class="f6">Lens array for single atom imaging</p>
+                        <p class="f7">September 2016</p>
+                      </div>
+                    </div>
+                    <img class="db lazy w-100"
+                         data-src="/work/single-atom-imaging/512w-thumb.jpg"
+                         data-srcset="/work/single-atom-imaging/256w-thumb.jpg 256w,
+                                      /work/single-atom-imaging/512w-thumb.jpg 512w"
+                         alt="Cover illustration of a custom lens array for single atom imaging.">
+                  </a>
+                </div>
+      
+          
+    </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+    
+      <script>
+        var lazyLoadInstance = new LazyLoad({
+          elements_selector: ".lazy",
+    //    callback_loaded: (el)=>{console.log("Loaded", el)}
+        });
+      </script>  </main>
+ <footer class="ml3-l">
+   <p class="f7 mb0">Inform Studio &#8226; Salisbury MD USA &#8226; <a href="mailto:info@inform.studio" class="bg-animate hover-bg-light-gray">info@inform.studio</a></p>
+ </footer></html>
