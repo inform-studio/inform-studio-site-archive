@@ -13,12 +13,14 @@
     @media (min-width: 60rem) {
       html {line-height: 1.5;}
     }
-    .grid-item {
+    @media (max-width: 60rem) {
+      .grid-item {
       padding: 0.125rem;
-    }
-    .grid-spacer {
+      }
+      .grid-spacer {
       padding-left: 0.125rem;
       padding-right: 0.125rem;
+      }
     }
     .contents :not(img) {
       max-width: 30em;
@@ -60,7 +62,7 @@
   <main>
     <div class="mw6 pl3-l pl1 pr1 pr0-l">
       <div id="title">
-        <h2 class="mb0 f5-l f6 fw4 mt3-l mt1"><a href="/" class="link black-90 bg-animate hover-bg-light-gray">Inform Studio</a></h2>
+        <h2 class="mb0 f5-l f6 fw4 mt3-l mt1"><a href="/" class="link black-90 bg-animate hover-bg-light-gray bb bn-l b--black-80">Inform Studio</a></h2>
         <h3 class="f3-l f4 fw4 mb4-l mb2 mt1">Visual Design for Scientific Communication</h3>
       </div>
       <div id="about">
