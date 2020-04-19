@@ -9,8 +9,19 @@
   <link rel="stylesheet" href="/tachyons.min.css">
   <link rel="stylesheet" href="/inter.css">
   <style>
+    @font-face {
+      font-family: 'open-arrow';
+      src: url('/fonts/OpenArrow-Regular.eot') format('embedded-opentype'),
+           url('/fonts/OpenArrow-Regular.woff2') format('woff2'),
+           url('/fonts/OpenArrow-Regular.woff') format('woff'),
+           url('/fonts/OpenArrow-Regular.otf') format('opentype'),
+           url('/fonts/OpenArrow-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      unicode-range: U+2190-21ff;
+    }
     @import "/inter.css";
-    html { font-family: 'Inter', sans-serif; line-height: 1.15;}
+    html { font-family: 'open-arrow', 'Inter', sans-serif; line-height: 1.15;}
     ul {
       padding-left:1rem;
     }
@@ -95,7 +106,7 @@
     </div>
     <div class="w-100 mw7 flex mt2-l mb3-l mb2 pl1 pr1 pl0-l pr0-l pt1">
       <div class="w-third fl tl pt2-l pt1">
-        <a href="/work/prospect-neutron-detector" class="fw5 fw4-l f5-l f6 link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">← Previous</a>
+        <a href="/work/prospect-neutron-detector" class="fw5 fw4-l f5-l f6 link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80"><span style="padding-top:0.25rem; font-size:85%;">&#x2190</span> Previous</a>
         <div class="relative overflow-hidden mt2 ba b--light-gray br2">
         <a class="link black" href="/work/prospect-neutron-detector">
           <div class="dn db-l absolute w-100 h-100 h-100 pb4-l fade-in z-1 tl">
@@ -116,7 +127,7 @@
         <a href="/#work" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">All Work</a>
       </div>
       <div class="w-third fl tr pt2-l pt1">
-        <a href="/work/quantum-dots-afm" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">Next →</a>
+        <a href="/work/quantum-dots-afm" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">Next <span style="padding-top:0.25rem; font-size:85%;">&#x2192</span></a>
         <div class="relative overflow-hidden mt2 ba b--light-gray br2">
         <a class="link black" href="/work/quantum-dots-afm">
           <div class="tl dn db-l absolute w-100 h-100 h-100 pb4-l fade-in z-1">
