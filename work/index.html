@@ -1,0 +1,1047 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <title>Inform Studio</title>
+  <meta charset = "UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/tachyons.min.css">
+  <link rel="stylesheet" href="/inter.css">
+  <style>
+    @font-face {
+      font-family: 'open-arrow';
+      src: url('/fonts/OpenArrow-Regular.eot') format('embedded-opentype'),
+           url('/fonts/OpenArrow-Regular.woff2') format('woff2'),
+           url('/fonts/OpenArrow-Regular.woff') format('woff'),
+           url('/fonts/OpenArrow-Regular.otf') format('opentype'),
+           url('/fonts/OpenArrow-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      unicode-range: U+2190-21ff;
+    }
+    @import "/inter.css";
+    html { font-family: 'open-arrow', 'Inter', sans-serif; line-height: 1.15;}
+    ul {
+      padding-left:1rem;
+    }
+    @media (min-width: 60rem) {
+      html {line-height: 1.5;}
+      .headshot {
+        width: 200px;
+        height: 200px
+      }
+      .nav-links {
+        font-size: 1.15rem;
+      }
+      .index-button {
+        max-width: 20rem;
+      }
+    }
+    @media (max-width: 60rem) {
+      .grid-item {
+      padding: 0.125rem;
+      }
+      .grid-spacer {
+      padding-left: 0.125rem;
+      padding-right: 0.125rem;
+      }
+      .link-mobile {
+        border-bottom: 1px solid black;
+      }
+    }
+    .selected {
+     border-bottom: 3px solid black;
+    }
+    a {
+      color: #0074D9;
+    }
+    .contents :not(img) {
+      max-width: 30em;
+    }
+    .contents img {
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+    }
+    .video-thumb::-internal-media-controls-overlay-cast-button {
+      display: none;
+    }
+    .fade-in {
+        opacity: 0;
+        transition: 0.15s ease-in;
+      }
+    .fade-in:hover {
+        opacity: 1;
+      }
+      /* Styling for lazy loaded images */
+
+      .lazy {
+        opacity:0;
+        transition: opacity 1s linear;
+      }
+
+      .lazy.initial {
+        transition: none !important;
+      }
+      .lazy.initial,
+      .lazy.loaded,
+      .lazy.error {
+        opacity: 1 !important;
+      }
+    </style>
+  </head><body class="w-100 black-90 f6 relative pa3-l pt0 pb1 mw8 center">
+  <header class="ml3-l mr3-l ml1 mr1 mb3 pb2 mb0-l pb4-l">
+    <div id="head" class="w-100 center">
+      <div class="pt3-l pb2-l mt2">
+        <a href="/" class="f4-l f6 link black mb0 dim dn fl-l db-l">Inform Studio</a>
+        <ul class="list pl0 fr-l mt0 nav-links f5 mb0">
+          <li class="dib pr4-l pr3 pb1-l mb0 db dn-l"><a class="link black dim link-mobile " href="/">Home</a></li>
+          <li class="dib pr4-l pr3 pb1-l mb0"><a class="link black dim link-mobile  bb black bw1 fw5-l fw6 selected " href="/work/">Work</a></li>
+          <li class="dib pr4-l pr3 pb1-l mb0"><a class="link black dim link-mobile " href="/about.html">About</a></li>
+          <li class="dib pr4-l pr3 pb3-l pb1-l mb0"><a class="link black dim link-mobile " href="/blog/">Blog</a></li>
+          <li class="dib pb1-l mb0"><a class="link black dim link-mobile" href="mailto:sean@inform.studio">Contact</a></li>
+        </ul>       </div>
+    </div>
+  </header>  <div class="ml3-l mr3-l ml1 mr1">
+    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2 bb b--black-80">Past Work</p>
+    <p class="mb0 fl mt2 pr3-l pr2 pt1-l pt0">Filter by category:</p>
+    <ul class="list pl0 mt3 mb3-l mb0 pt1-l pt0">
+      <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80 fw5 black bg-light-gray" href="/work">All</a></li>
+      <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80" href="/tags/illustration">Illustration</a></li>
+      <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80" href="/tags/animation">Animation</a></li>
+      <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80" href="/tags/diagrams">Diagrams</a></li>
+      <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80" href="/tags/journal-covers">Journal Covers</a></li>
+      <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80" href="/tags/interactive">Interactive</a></li>
+    </ul>  </div>
+  <main>
+    <div class="flex flex-wrap">
+      
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/matching-crime-scene-bullets">
+              <video loop muted playsinline poster="/work/matching-crime-scene-bullets/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/matching-crime-scene-bullets/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/matching-crime-scene-bullets/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/matching-crime-scene-bullets" class="link black dim">Matching Crime Scene Bullets Segment by Segment</a></p>
+                  <p class="f7 mt0 mb0">March 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/visualizing-strands-pcdtpt">
+              <img class="db lazy w-100"
+                   data-src="/work/visualizing-strands-pcdtpt/512w-thumb.jpg"
+                   data-srcset="/work/visualizing-strands-pcdtpt/256w-thumb.jpg 256w,
+                                /work/visualizing-strands-pcdtpt/512w-thumb.jpg 512w"
+                   alt="PCDTPT molecules drawn as gummy worms.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/visualizing-strands-pcdtpt" class="link black dim">Visualizing strands of PCDTPT</a></p>
+                  <p class="f7 mt0 mb0">March 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/future-of-computation">
+              <video loop muted playsinline poster="/work/future-of-computation/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/future-of-computation/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/future-of-computation/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/future-of-computation" class="link black dim">The Future of Computation</a></p>
+                  <p class="f7 mt0 mb0">February 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/noncontact-testing-silicon-conductivity">
+              <img class="db lazy w-100"
+                   data-src="/work/noncontact-testing-silicon-conductivity/512w-thumb.jpg"
+                   data-srcset="/work/noncontact-testing-silicon-conductivity/256w-thumb.jpg 256w,
+                                /work/noncontact-testing-silicon-conductivity/512w-thumb.jpg 512w"
+                   alt="Diagram of photonic testing of silicon.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/noncontact-testing-silicon-conductivity" class="link black dim">Non-contact testing of silicon conductivity</a></p>
+                  <p class="f7 mt0 mb0">February 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/intelligent-control-autonomous-robots">
+              <video loop muted playsinline poster="/work/intelligent-control-autonomous-robots/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/intelligent-control-autonomous-robots/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/intelligent-control-autonomous-robots/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/intelligent-control-autonomous-robots" class="link black dim">Intelligent Control for Autonomous Robots</a></p>
+                  <p class="f7 mt0 mb0">February 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/linking-microbalance-measurements">
+              <video loop muted playsinline poster="/work/linking-microbalance-measurements/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/linking-microbalance-measurements/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/linking-microbalance-measurements/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/linking-microbalance-measurements" class="link black dim">Linking Microbalance Measurements to the S.I.</a></p>
+                  <p class="f7 mt0 mb0">February 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/searching-quantum-gravity">
+              <video loop muted playsinline poster="/work/searching-quantum-gravity/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/searching-quantum-gravity/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/searching-quantum-gravity/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/searching-quantum-gravity" class="link black dim">Searching for Quantum Gravity</a></p>
+                  <p class="f7 mt0 mb0">January 2020</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/interfering-photons-different-buildings">
+              <img class="db lazy w-100"
+                   data-src="/work/interfering-photons-different-buildings/512w-thumb.jpg"
+                   data-srcset="/work/interfering-photons-different-buildings/256w-thumb.jpg 256w,
+                                /work/interfering-photons-different-buildings/512w-thumb.jpg 512w"
+                   alt="Schematic of photon interference experiment.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/interfering-photons-different-buildings" class="link black dim">A new playbook for interference</a></p>
+                  <p class="f7 mt0 mb0">December 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/mapping-signals-immune-system">
+              <video loop muted playsinline poster="/work/mapping-signals-immune-system/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/mapping-signals-immune-system/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/mapping-signals-immune-system/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/mapping-signals-immune-system" class="link black dim">Mapping Signals in the Immune System</a></p>
+                  <p class="f7 mt0 mb0">November 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/beam-expander">
+              <video loop muted playsinline poster="/work/beam-expander/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/beam-expander/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/beam-expander/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/beam-expander" class="link black dim">Expanding light from a waveguide into air</a></p>
+                  <p class="f7 mt0 mb0">November 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/measuring-moonlight-edge-atmosphere">
+              <video loop muted playsinline poster="/work/measuring-moonlight-edge-atmosphere/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/measuring-moonlight-edge-atmosphere/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/measuring-moonlight-edge-atmosphere/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/measuring-moonlight-edge-atmosphere" class="link black dim">Measuring Moonlight from the Edge of the Atmosphere</a></p>
+                  <p class="f7 mt0 mb0">November 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/switching-light-nanoscale">
+              <video loop muted playsinline poster="/work/switching-light-nanoscale/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/switching-light-nanoscale/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/switching-light-nanoscale/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/switching-light-nanoscale" class="link black dim">Switching Light at the Nanoscale</a></p>
+                  <p class="f7 mt0 mb0">November 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/neutron-spin-angular-momentum">
+              <video loop muted playsinline poster="/work/neutron-spin-angular-momentum/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/neutron-spin-angular-momentum/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/neutron-spin-angular-momentum/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/neutron-spin-angular-momentum" class="link black dim">Controlling neutron spin and orbital angular momentum</a></p>
+                  <p class="f7 mt0 mb0">October 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/studying-sugars-nanoscale">
+              <video loop muted playsinline poster="/work/studying-sugars-nanoscale/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/studying-sugars-nanoscale/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/studying-sugars-nanoscale/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/studying-sugars-nanoscale" class="link black dim">Studying sugars at the nanoscale</a></p>
+                  <p class="f7 mt0 mb0">October 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/neutron-interferometer">
+              <img class="db lazy w-100"
+                   data-src="/work/neutron-interferometer/512w-thumb.jpg"
+                   data-srcset="/work/neutron-interferometer/256w-thumb.jpg 256w,
+                                /work/neutron-interferometer/512w-thumb.jpg 512w"
+                   alt="Diagram of neutron holography experiment.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/neutron-interferometer" class="link black dim">Holography with a neutron interferometer</a></p>
+                  <p class="f7 mt0 mb0">October 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/measuring-microfluidic-flows-with-light">
+              <video loop muted playsinline poster="/work/measuring-microfluidic-flows-with-light/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/measuring-microfluidic-flows-with-light/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/measuring-microfluidic-flows-with-light/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/measuring-microfluidic-flows-with-light" class="link black dim">Measuring the Flow of Tiny Amounts of Liquid, with Light</a></p>
+                  <p class="f7 mt0 mb0">September 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/liquid-gate-transistor">
+              <img class="db lazy w-100"
+                   data-src="/work/liquid-gate-transistor/512w-thumb.jpg"
+                   data-srcset="/work/liquid-gate-transistor/256w-thumb.jpg 256w,
+                                /work/liquid-gate-transistor/512w-thumb.jpg 512w"
+                   alt="Diagram of the liquid-gate transistor device.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/liquid-gate-transistor" class="link black dim">A liquid-gate sensor for Alzheimer’s research</a></p>
+                  <p class="f7 mt0 mb0">August 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/measuring-smokestack-emissions">
+              <video loop muted playsinline poster="/work/measuring-smokestack-emissions/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/measuring-smokestack-emissions/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/measuring-smokestack-emissions/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/measuring-smokestack-emissions" class="link black dim">Measuring smokestack emissions</a></p>
+                  <p class="f7 mt0 mb0">June 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/window-cell-growth">
+              <video loop muted playsinline poster="/work/window-cell-growth/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/window-cell-growth/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/window-cell-growth/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/window-cell-growth" class="link black dim">A Window Into Cell Growth</a></p>
+                  <p class="f7 mt0 mb0">June 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/measuring-magnetic-bubbles">
+              <video loop muted playsinline poster="/work/measuring-magnetic-bubbles/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/measuring-magnetic-bubbles/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/measuring-magnetic-bubbles/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/measuring-magnetic-bubbles" class="link black dim">Measuring magnetic bubbles</a></p>
+                  <p class="f7 mt0 mb0">June 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/interferometer-diagram">
+              <img class="db lazy w-100"
+                   data-src="/work/interferometer-diagram/512w-thumb.jpg"
+                   data-srcset="/work/interferometer-diagram/256w-thumb.jpg 256w,
+                                /work/interferometer-diagram/512w-thumb.jpg 512w"
+                   alt="Interferometer diagram.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/interferometer-diagram" class="link black dim">Principle of measuring distance with an interferometer</a></p>
+                  <p class="f7 mt0 mb0">May 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/digital-agriculture">
+              <video loop muted playsinline poster="/work/digital-agriculture/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/digital-agriculture/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/digital-agriculture/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/digital-agriculture" class="link black dim">Digital Agriculture</a></p>
+                  <p class="f7 mt0 mb0">May 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/shaping-fast-light-pulses">
+              <img class="db lazy w-100"
+                   data-src="/work/shaping-fast-light-pulses/512w-thumb.jpg"
+                   data-srcset="/work/shaping-fast-light-pulses/256w-thumb.jpg 256w,
+                                /work/shaping-fast-light-pulses/512w-thumb.jpg 512w"
+                   alt="Schematic showing a technique to reshape the properties of an ultrafast light pulse.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/shaping-fast-light-pulses" class="link black dim">Shaping super-fast light pulses</a></p>
+                  <p class="f7 mt0 mb0">May 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/electron-beam-ion-trap">
+              <video loop muted playsinline poster="/work/electron-beam-ion-trap/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/electron-beam-ion-trap/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/electron-beam-ion-trap/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/electron-beam-ion-trap" class="link black dim">The electron beam ion trap</a></p>
+                  <p class="f7 mt0 mb0">April 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/biodiversity-interactions-ecology">
+              <video loop muted playsinline poster="/work/biodiversity-interactions-ecology/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/biodiversity-interactions-ecology/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/biodiversity-interactions-ecology/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/biodiversity-interactions-ecology" class="link black dim">Biodiversity, Interactions, and Ecology</a></p>
+                  <p class="f7 mt0 mb0">April 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/shaping-light-metasurface">
+              <img class="db lazy w-100"
+                   data-src="/work/shaping-light-metasurface/512w-thumb.jpg"
+                   data-srcset="/work/shaping-light-metasurface/256w-thumb.jpg 256w,
+                                /work/shaping-light-metasurface/512w-thumb.jpg 512w"
+                   alt="Artistic interpretation of an ultrafast light pulse passing through a metasurface.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/shaping-light-metasurface" class="link black dim">Shaping light with a metasurface</a></p>
+                  <p class="f7 mt0 mb0">April 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/three-color-metasurface">
+              <img class="db lazy w-100"
+                   data-src="/work/three-color-metasurface/512w-thumb.jpg"
+                   data-srcset="/work/three-color-metasurface/256w-thumb.jpg 256w,
+                                /work/three-color-metasurface/512w-thumb.jpg 512w"
+                   alt="Three separate frequencies of light passing through a metasurface.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/three-color-metasurface" class="link black dim">Three colors passing through a metasurface</a></p>
+                  <p class="f7 mt0 mb0">March 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/fixed-length-optical-cavity">
+              <video loop muted playsinline poster="/work/fixed-length-optical-cavity/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/fixed-length-optical-cavity/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/fixed-length-optical-cavity/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/fixed-length-optical-cavity" class="link black dim">Gauging pressure with light: the fixed-length optical cavity</a></p>
+                  <p class="f7 mt0 mb0">February 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/entanglement-generation-ring-resonator">
+              <img class="db lazy w-100"
+                   data-src="/work/entanglement-generation-ring-resonator/512w-thumb.jpg"
+                   data-srcset="/work/entanglement-generation-ring-resonator/256w-thumb.jpg 256w,
+                                /work/entanglement-generation-ring-resonator/512w-thumb.jpg 512w"
+                   alt="Photons exiting a ring resonator.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/entanglement-generation-ring-resonator" class="link black dim">Entanglement generation with a ring resonator</a></p>
+                  <p class="f7 mt0 mb0">February 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/graphene-origami">
+              <video loop muted playsinline poster="/work/graphene-origami/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/graphene-origami/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/graphene-origami/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/graphene-origami" class="link black dim">Graphene Origami</a></p>
+                  <p class="f7 mt0 mb0">February 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/dielectric-spectroscopy-paper">
+              <video loop muted playsinline poster="/work/dielectric-spectroscopy-paper/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/dielectric-spectroscopy-paper/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/dielectric-spectroscopy-paper/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/dielectric-spectroscopy-paper" class="link black dim">Measuring the composition of paper</a></p>
+                  <p class="f7 mt0 mb0">February 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/fractional-hall-effect-graphene">
+              <img class="db lazy w-100"
+                   data-src="/work/fractional-hall-effect-graphene/512w-thumb.jpg"
+                   data-srcset="/work/fractional-hall-effect-graphene/256w-thumb.jpg 256w,
+                                /work/fractional-hall-effect-graphene/512w-thumb.jpg 512w"
+                   alt="Orbiting electrons above a hexagonal graphene surface.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/fractional-hall-effect-graphene" class="link black dim">Fractional quantum Hall effect in graphene</a></p>
+                  <p class="f7 mt0 mb0">January 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/demo-reel">
+              <video loop muted playsinline poster="/work/demo-reel/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/demo-reel/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/demo-reel/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/demo-reel" class="link black dim">Demo Reel</a></p>
+                  <p class="f7 mt0 mb0">January 2019</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/cold-atom-vacuum-standard">
+              <video loop muted playsinline poster="/work/cold-atom-vacuum-standard/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/cold-atom-vacuum-standard/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/cold-atom-vacuum-standard/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/cold-atom-vacuum-standard" class="link black dim">Measuring pressure with a cold-atom vacuum standard</a></p>
+                  <p class="f7 mt0 mb0">October 2018</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/single-flux-quantum-synthesizer">
+              <video loop muted playsinline poster="/work/single-flux-quantum-synthesizer/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/single-flux-quantum-synthesizer/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/single-flux-quantum-synthesizer/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/single-flux-quantum-synthesizer" class="link black dim">NIST&#x27;s single flux quantum waveform synthesizer</a></p>
+                  <p class="f7 mt0 mb0">September 2018</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/single-flux-quanta">
+              <img class="db lazy w-100"
+                   data-src="/work/single-flux-quanta/512w-thumb.jpg"
+                   data-srcset="/work/single-flux-quanta/256w-thumb.jpg 256w,
+                                /work/single-flux-quanta/512w-thumb.jpg 512w"
+                   alt="Magnetic lines move along a circuit.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/single-flux-quanta" class="link black dim">Single flux quantum circuit</a></p>
+                  <p class="f7 mt0 mb0">September 2018</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/neutron-flux-monitor">
+              <img class="db lazy w-100"
+                   data-src="/work/neutron-flux-monitor/512w-thumb.jpg"
+                   data-srcset="/work/neutron-flux-monitor/256w-thumb.jpg 256w,
+                                /work/neutron-flux-monitor/512w-thumb.jpg 512w"
+                   alt="Diagram of neutron flux monitor.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/neutron-flux-monitor" class="link black dim">Calibrating a portable neutron flux monitor</a></p>
+                  <p class="f7 mt0 mb0">May 2018</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/gallium-nitride-nanowire">
+              <img class="db lazy w-100"
+                   data-src="/work/gallium-nitride-nanowire/512w-thumb.jpg"
+                   data-srcset="/work/gallium-nitride-nanowire/256w-thumb.jpg 256w,
+                                /work/gallium-nitride-nanowire/512w-thumb.jpg 512w"
+                   alt="Stylized illustration of a gallium-nitride nanowire LED on a silicon substrate.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/gallium-nitride-nanowire" class="link black dim">Gallium-nitride nanowire LED</a></p>
+                  <p class="f7 mt0 mb0">June 2017</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/rosi-light-reflection">
+              <img class="db lazy w-100"
+                   data-src="/work/rosi-light-reflection/512w-thumb.jpg"
+                   data-srcset="/work/rosi-light-reflection/256w-thumb.jpg 256w,
+                                /work/rosi-light-reflection/512w-thumb.jpg 512w"
+                   alt="Diagram of the robotic optical scattering instrument.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/rosi-light-reflection" class="link black dim">Robotic optical scattering instrument (ROSI)</a></p>
+                  <p class="f7 mt0 mb0">February 2017</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/prospect-neutron-detector">
+              <img class="db lazy w-100"
+                   data-src="/work/prospect-neutron-detector/512w-thumb.jpg"
+                   data-srcset="/work/prospect-neutron-detector/256w-thumb.jpg 256w,
+                                /work/prospect-neutron-detector/512w-thumb.jpg 512w"
+                   alt="Cutaway diagram of the PROSPECT neutron detector.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/prospect-neutron-detector" class="link black dim">Diagram of PROSPECT neutron detector</a></p>
+                  <p class="f7 mt0 mb0">December 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/honeycomb-lattice-bend">
+              <img class="db lazy w-100"
+                   data-src="/work/honeycomb-lattice-bend/512w-thumb.jpg"
+                   data-srcset="/work/honeycomb-lattice-bend/256w-thumb.jpg 256w,
+                                /work/honeycomb-lattice-bend/512w-thumb.jpg 512w"
+                   alt="Close-up visualization of a “honeycomb” (hexagonal) lattice potential.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/honeycomb-lattice-bend" class="link black dim">Stylized honeycomb lattice potential</a></p>
+                  <p class="f7 mt0 mb0">November 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/quantum-dots-afm">
+              <img class="db lazy w-100"
+                   data-src="/work/quantum-dots-afm/512w-thumb.jpg"
+                   data-srcset="/work/quantum-dots-afm/256w-thumb.jpg 256w,
+                                /work/quantum-dots-afm/512w-thumb.jpg 512w"
+                   alt="White quantum dots sit on an orange semiconductor surface.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/quantum-dots-afm" class="link black dim">Quantum dots on a semiconductor surface</a></p>
+                  <p class="f7 mt0 mb0">October 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/weyl-semimetal">
+              <img class="db lazy w-100"
+                   data-src="/work/weyl-semimetal/512w-thumb.jpg"
+                   data-srcset="/work/weyl-semimetal/256w-thumb.jpg 256w,
+                                /work/weyl-semimetal/512w-thumb.jpg 512w"
+                   alt="A rendering of a semimetal band structure in which bands touch at single points.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/weyl-semimetal" class="link black dim">Weyl semimetal band structure</a></p>
+                  <p class="f7 mt0 mb0">October 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/single-atom-imaging">
+              <img class="db lazy w-100"
+                   data-src="/work/single-atom-imaging/512w-thumb.jpg"
+                   data-srcset="/work/single-atom-imaging/256w-thumb.jpg 256w,
+                                /work/single-atom-imaging/512w-thumb.jpg 512w"
+                   alt="Cover illustration of a custom lens array for single atom imaging.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/single-atom-imaging" class="link black dim">Lens array for single atom imaging</a></p>
+                  <p class="f7 mt0 mb0">September 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/hyperspectral-algae-blooms">
+              <video loop muted playsinline poster="/work/hyperspectral-algae-blooms/thumb.jpg" class="db lazy w-100 video-thumb">
+                <source
+                        data-src="/work/hyperspectral-algae-blooms/thumb.mp4"
+                        type="video/mp4"> 
+                <img
+                     data-src="/work/hyperspectral-algae-blooms/thumb.jpg"
+                     title="Your browser does not support the <video> tag">
+              </video>
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/hyperspectral-algae-blooms" class="link black dim">Identifying algae blooms through hyperspectral imaging</a></p>
+                  <p class="f7 mt0 mb0">August 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/rydberg-atoms-optical-lattice">
+              <img class="db lazy w-100"
+                   data-src="/work/rydberg-atoms-optical-lattice/512w-thumb.jpg"
+                   data-srcset="/work/rydberg-atoms-optical-lattice/256w-thumb.jpg 256w,
+                                /work/rydberg-atoms-optical-lattice/512w-thumb.jpg 512w"
+                   alt="Pink atoms sit in a blue 2D optical lattice.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/rydberg-atoms-optical-lattice" class="link black dim">Rydberg atoms in a 2D optical lattice</a></p>
+                  <p class="f7 mt0 mb0">March 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/parafermion-mode-bec">
+              <img class="db lazy w-100"
+                   data-src="/work/parafermion-mode-bec/512w-thumb.jpg"
+                   data-srcset="/work/parafermion-mode-bec/256w-thumb.jpg 256w,
+                                /work/parafermion-mode-bec/512w-thumb.jpg 512w"
+                   alt="Two spheres (the parafermion) sit on either side of a short trench containing a cloud of atoms.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/parafermion-mode-bec" class="link black dim">Parafermionic mode in an ultracold bosonic system</a></p>
+                  <p class="f7 mt0 mb0">February 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/stacked-lenses-single-atom">
+              <img class="db lazy w-100"
+                   data-src="/work/stacked-lenses-single-atom/512w-thumb.jpg"
+                   data-srcset="/work/stacked-lenses-single-atom/256w-thumb.jpg 256w,
+                                /work/stacked-lenses-single-atom/512w-thumb.jpg 512w"
+                   alt="Stacked lenses collect light from a single atom.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/stacked-lenses-single-atom" class="link black dim">Stacked lenses imaging a single atom</a></p>
+                  <p class="f7 mt0 mb0">January 2016</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/rf-squid-metamaterial">
+              <img class="db lazy w-100"
+                   data-src="/work/rf-squid-metamaterial/512w-thumb.jpg"
+                   data-srcset="/work/rf-squid-metamaterial/256w-thumb.jpg 256w,
+                                /work/rf-squid-metamaterial/512w-thumb.jpg 512w"
+                   alt="An array of circular structures becomes transparent to radio waves.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/rf-squid-metamaterial" class="link black dim">A rf-SQUID based metamaterial</a></p>
+                  <p class="f7 mt0 mb0">December 2015</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/optical-attenuator-calibration">
+              <img class="db lazy w-100"
+                   data-src="/work/optical-attenuator-calibration/512w-thumb.jpg"
+                   data-srcset="/work/optical-attenuator-calibration/256w-thumb.jpg 256w,
+                                /work/optical-attenuator-calibration/512w-thumb.jpg 512w"
+                   alt="Light from a pulsed laser is directed through a variable attenuator onto a transition edge sensor device.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/optical-attenuator-calibration" class="link black dim">Measuring optical power with single-photon detectors</a></p>
+                  <p class="f7 mt0 mb0">October 2015</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/solar-spectrum-measurement">
+              <img class="db lazy w-100"
+                   data-src="/work/solar-spectrum-measurement/512w-thumb.jpg"
+                   data-srcset="/work/solar-spectrum-measurement/256w-thumb.jpg 256w,
+                                /work/solar-spectrum-measurement/512w-thumb.jpg 512w"
+                   alt="Schematic illustration of a spectrometer with capture optics, integrating sphere, system of gratings, and associated electronics">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/solar-spectrum-measurement" class="link black dim">Ground-based solar spectrometer</a></p>
+                  <p class="f7 mt0 mb0">October 2015</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/microfluidic-diamond-sensor">
+              <img class="db lazy w-100"
+                   data-src="/work/microfluidic-diamond-sensor/512w-thumb.jpg"
+                   data-srcset="/work/microfluidic-diamond-sensor/256w-thumb.jpg 256w,
+                                /work/microfluidic-diamond-sensor/512w-thumb.jpg 512w"
+                   alt="Diagram of nanocrystal sensor.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/microfluidic-diamond-sensor" class="link black dim">A microfluidic diamond magnetometer</a></p>
+                  <p class="f7 mt0 mb0">February 2015</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/chiral-spin-superfluid">
+              <img class="db lazy w-100"
+                   data-src="/work/chiral-spin-superfluid/512w-thumb.jpg"
+                   data-srcset="/work/chiral-spin-superfluid/256w-thumb.jpg 256w,
+                                /work/chiral-spin-superfluid/512w-thumb.jpg 512w"
+                   alt="Spontaneous chiral spin superfluid diagram.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/chiral-spin-superfluid" class="link black dim">A spontaneous chiral spin superfluid</a></p>
+                  <p class="f7 mt0 mb0">October 2014</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/thermal-light">
+              <img class="db lazy w-100"
+                   data-src="/work/thermal-light/512w-thumb.jpg"
+                   data-srcset="/work/thermal-light/256w-thumb.jpg 256w,
+                                /work/thermal-light/512w-thumb.jpg 512w"
+                   alt="Coherent light passes through a pair of slits.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/thermal-light" class="link black dim">Sub-wavelength interference with thermal light</a></p>
+                  <p class="f7 mt0 mb0">October 2014</p>
+                </div>
+              </div>
+          </div>
+        <div class="w-third-l w-50 pa3-l pb2-l grid-item relative overflow-hidden ma0">
+          <a class="link black dim db ba b--black-80 br2 overflow-hidden" href="/work/resonant-exchange-qubit">
+              <img class="db lazy w-100"
+                   data-src="/work/resonant-exchange-qubit/512w-thumb.jpg"
+                   data-srcset="/work/resonant-exchange-qubit/256w-thumb.jpg 256w,
+                                /work/resonant-exchange-qubit/512w-thumb.jpg 512w"
+                   alt="Diagram about creating and manipulating a singlet-triplet qubit.">
+              </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f5 mt1 mb1"><a href="/work/resonant-exchange-qubit" class="link black dim">Resonant exchange qubits</a></p>
+                  <p class="f7 mt0 mb0">August 2013</p>
+                </div>
+              </div>
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+    
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        callback_loaded: (el)=>{console.log("Loaded", el)}
+      });
+    </script><script>
+      var isMobile = false; //initiate as false
+      // device detection from http://detectmobilebrowsers.com/
+      if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+          || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+          isMobile = true;
+      }
+    
+      if (! isMobile) {
+        let videos = document.getElementsByTagName('video');
+        for (let index = 0; index < videos.length; ++index) {
+          videos[index].setAttribute('autoplay','');
+        }
+      }
+    </script>  </main>
+  <div class="mt4"></div>
+  <footer class="ml3-l mr3-l ml1 mr1 bt-l b--black-80">
+    <p class="f7 mb0"><a href="/" class="dim link blue">Inform Studio</a> &#8226; Salisbury MD USA &#8226; <a href="/about.html" class="dim link blue">About</a> &#8226; <a href="mailto:info@inform.studio" class="dim link blue">Contact</a></p>
+  </footer>  </body>
+</html>
