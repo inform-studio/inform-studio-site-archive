@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/tachyons.min.css">
   <link rel="stylesheet" href="/inter.css">
+  <link rel="stylesheet" href="/highlight.css">
   <style>
     @font-face {
       font-family: 'open-arrow';
@@ -63,6 +64,9 @@
       .index-button {
         max-width: 20rem;
       }
+      code {
+        font-size: 0.8rem !important;
+      }
     }
     @media (max-width: 60rem) {
       .grid-item {
@@ -85,10 +89,31 @@
     a {
       color: #0074D9;
     }
+    code {
+      font-size: 0.7rem;
+    }
     .contents :not(img) {
       max-width: 30em;
     }
+    .blog :not(.lang-highlight):not(code) {
+       max-width: 36em;
+    }
+    pre code {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      padding: 1rem !important;
+      box-sizing: border-box;
+    }
+    pre {
+     white-space: pre-wrap;       /* css-3 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
     .contents img {
+      width: 100%;
       border: 1px solid rgb(0, 0, 0, 0.8);
       border-radius: .25rem;
       box-sizing: border-box;
@@ -142,6 +167,15 @@
   <main class="ml3-l mr3-l ml1 mr1">
     <div class="mw6 mb4-l mb3 mt3-l mt0">
         <div class="w-100 mt3-l mt0 pt1 ">
+          <p class="f7 mw7 mb0">
+            June 18, 2020
+          </p>
+          <p class="f4 mt1 mb0 mt0"><a href="/blog/testing-code-highlighting" class="link black-90 dim">Testing code highlighting</a></p>
+          <p class="f6 measure lh-copy-l mt1 mb1">Just testing out a metalsmith plugin so syntax highlighting works in the blog.</p>
+          <p class="f7 mw7 mt0">Tagged:
+              <a href="/blog/tags#journal">Journal</a>
+          </p>
+        </div>        <div class="w-100 mt3-l mt0 pt1 pt2 mt3">
           <p class="f7 mw7 mb0">
             November 14, 2019
           </p>

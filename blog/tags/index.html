@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/tachyons.min.css">
   <link rel="stylesheet" href="/inter.css">
+  <link rel="stylesheet" href="/highlight.css">
   <style>
     @font-face {
       font-family: 'open-arrow';
@@ -63,6 +64,9 @@
       .index-button {
         max-width: 20rem;
       }
+      code {
+        font-size: 0.8rem !important;
+      }
     }
     @media (max-width: 60rem) {
       .grid-item {
@@ -85,10 +89,31 @@
     a {
       color: #0074D9;
     }
+    code {
+      font-size: 0.7rem;
+    }
     .contents :not(img) {
       max-width: 30em;
     }
+    .blog :not(.lang-highlight):not(code) {
+       max-width: 36em;
+    }
+    pre code {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      padding: 1rem !important;
+      box-sizing: border-box;
+    }
+    pre {
+     white-space: pre-wrap;       /* css-3 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
     .contents img {
+      width: 100%;
       border: 1px solid rgb(0, 0, 0, 0.8);
       border-radius: .25rem;
       box-sizing: border-box;
@@ -147,6 +172,10 @@
     </p>
       <div class="mb4-l mb3"> 
       <h1 id="#journal" class="fw4 f4-l f5">Journal</h1>
+        <div class="blog-entry">
+          <p class="mb0 f5-l f6"><a href="/blog/testing-code-highlighting">Testing code highlighting</a></p>
+          <p class="f7" style="margin-top: 0.2rem;">June 18, 2020</p>
+        </div>
         <div class="blog-entry">
           <p class="mb0 f5-l f6"><a href="/blog/picking-the-blog-back-up">Picking the blog back up</a></p>
           <p class="f7" style="margin-top: 0.2rem;">November 14, 2019</p>

@@ -1,8 +1,6 @@
-<!DOCTYPE HTML>
-<html lang = "en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <title>Inform Studio</title>
-  <meta charset = "UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -158,40 +156,89 @@
         </ul>       </div>
     </div>
   </header>  <div class="ml3-l mr3-l ml1 mr1">
-    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2">Starting off</p>
-     <p class="f7">Published: September 22, 2019
-       &#8226; Tagged: 
-         <a href="/blog/tags#journal">Journal</a>,
-         <a href="/blog/tags#tag-test">Tag Test</a>
+    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2">Testing code highlighting</p>
+     <p class="f7">Published: June 18, 2020
+       • Tagged: 
+         <a href="/blog/tags#journal">Journal</a>
     </p>
   </div>
   <main class="ml3-l mr3-l ml1 mr1">
     <div class="mb4-l mb3 mt3-l mt2 blog">
-      <p>I&#39;ve wanted to keep a casual blog for a while, and have finally gotten around to adding it to my portfolio site. May create a stand-alone one eventually, but this will do for now.</p>
-<p>My goals are keeping a work-related journal, logging interesting techniques and tips for graphics work, and possibly writing about animation, scientific illustration, and other graphics/design-related topics that interest me.</p>
+      <p>Using <a href="https://github.com/fortes/metalsmith-code-highlight">metalsmith-code-highlight</a>, let's see what happens. Here's an example of python:</p>
+<pre class="lang-highlight"><code class="language-python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">regular_polygon</span><span class="hljs-params">(initial_point, radius, num_points, centered=True, highlight_points = True)</span>:</span>
+    <span class="hljs-keyword">if</span> (num_points &lt; <span class="hljs-number">3</span>):
+        num_points = <span class="hljs-number">3</span>  
+
+    points = []
+
+    angle = <span class="hljs-number">2</span> * math.pi / num_points
+
+    p = initial_point
+
+    <span class="hljs-keyword">if</span> (centered):
+        center_angle =  (<span class="hljs-number">3</span> * math.pi / <span class="hljs-number">2</span>) + angle / <span class="hljs-number">2</span>
+        p = project_from_angle(initial_point, center_angle, radius)
+
+    length_of_side = <span class="hljs-number">2</span> * radius * math.sin(math.pi/num_points)
+
+    <span class="hljs-keyword">for</span> point <span class="hljs-keyword">in</span> range(num_points):
+        points.append(p)
+        p = project_from_angle(p, angle, length_of_side)
+        angle += <span class="hljs-number">2</span> * math.pi / num_points
+
+    <span class="hljs-keyword">if</span> (highlight_points):
+        <span class="hljs-keyword">with</span> savedState():
+            stroke(*blue)
+            oval(initial_point[<span class="hljs-number">0</span>] - <span class="hljs-number">5</span>, initial_point[<span class="hljs-number">1</span>] - <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+            <span class="hljs-keyword">for</span> index, p <span class="hljs-keyword">in</span> enumerate(points):
+                h = <span class="hljs-number">10</span> <span class="hljs-keyword">if</span> index == <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">6</span>
+                oval(p[<span class="hljs-number">0</span>] - h/<span class="hljs-number">2</span>, p[<span class="hljs-number">1</span>] - h/<span class="hljs-number">2</span>, h, h)
+            line(points[<span class="hljs-number">0</span>], initial_point)
+
+    <span class="hljs-keyword">return</span> points</code></pre>
+<p>And here's some javascript:</p>
+<pre class="lang-highlight"><code class="language-javascript hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calcWave</span>(<span class="hljs-params">vel,values</span>) </span>{
+  <span class="hljs-comment">// Increment theta (try different values for </span>
+  <span class="hljs-comment">// 'angular velocity' here</span>
+  theta += vel;
+  <span class="hljs-comment">// For every x value, calculate a y value with sine function</span>
+  <span class="hljs-keyword">var</span> x = theta;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; values.length; i++) {
+    values[i] = sin(x)*amplitude;
+    x+=dx;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fixedCircle</span> (<span class="hljs-params">vel, color</span>) </span>{
+    theta += vel;
+    fill(color)
+    noStroke()
+    ellipse(<span class="hljs-number">100</span>, height/<span class="hljs-number">2</span> + amplitude * sin(<span class="hljs-number">25</span> * dx + theta), <span class="hljs-number">20</span>, <span class="hljs-number">20</span>);
+}</code></pre>
+<p>Everything seems to be working properly! </p>
 
     </div>
     <div class="pa0-l">
       <p class="f7 mb3 mw6">Questions or comments? Email <a href="mailto:sean@inform.studio" class="link blue dim bb-l">sean@inform.studio</a>.</p>
     </div>
     <div class="w-100 mw7 flex mt4-l mb3-l mb2 pt1">
-      <div class="w-third fl tc pt2-l pt1">
-        <a href="/blog/" class="fw5 fw4-l link black-90 dim nav-links f5">All Posts</a>
-      </div>
-       <div class="w-third fl tc-l tr pt2-l pt1">
-        <a href="/blog/picking-the-blog-back-up" class="fw5 fw4-l link black-90 dim nav-links f5">Next <span style="padding-top:0.25rem; font-size:85%;">&#x2192</span> 
-          <a class="link black dim" href="/blog/picking-the-blog-back-up">
+      <div class="w-third fl tc-l tl pt2-l pt1">
+        <a href="/blog/picking-the-blog-back-up" class="fw5 fw4-l link black-90 dim nav-links f5"><span style="padding-top:0.25rem; font-size:85%;">←</span> Previous
+          </a><a class="link black" href="/blog/picking-the-blog-back-up">
             <div class="ba b--black-80 br2 pa2 mt2 dim">
               <p class="f5 mt2 mb0">Picking the blog back up</p>
               <p class="f7 mt1">November 14, 2019</p>
             </div>
           </a>
-        </a>
+        
+      </div>
+      <div class="w-third fl tc pt2-l pt1">
+        <a href="/blog/" class="fw5 fw4-l link black-90 dim nav-links f5">All Posts</a>
       </div>
     </div>
   <div class="mt4-l mt2 pt1 pt0-l"></div>
   </main>
   <footer class="ml3-l mr3-l ml1 mr1 bt-l b--black-80">
-    <p class="f7 mb0"><a href="/" class="dim link blue">Inform Studio</a> &#8226; Salisbury MD USA &#8226; <a href="/about.html" class="dim link blue">About</a> &#8226; <a href="mailto:info@inform.studio" class="dim link blue">Contact</a></p>
-  </footer></body>
-</html>
+    <p class="f7 mb0"><a href="/" class="dim link blue">Inform Studio</a> • Salisbury MD USA • <a href="/about.html" class="dim link blue">About</a> • <a href="mailto:info@inform.studio" class="dim link blue">Contact</a></p>
+  </footer>
+</body></html>

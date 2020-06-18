@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/tachyons.min.css">
   <link rel="stylesheet" href="/inter.css">
+  <link rel="stylesheet" href="/highlight.css">
   <style>
     @font-face {
       font-family: 'open-arrow';
@@ -63,6 +64,9 @@
       .index-button {
         max-width: 20rem;
       }
+      code {
+        font-size: 0.8rem !important;
+      }
     }
     @media (max-width: 60rem) {
       .grid-item {
@@ -85,10 +89,31 @@
     a {
       color: #0074D9;
     }
+    code {
+      font-size: 0.7rem;
+    }
     .contents :not(img) {
       max-width: 30em;
     }
+    .blog :not(.lang-highlight):not(code) {
+       max-width: 36em;
+    }
+    pre code {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      padding: 1rem !important;
+      box-sizing: border-box;
+    }
+    pre {
+     white-space: pre-wrap;       /* css-3 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
     .contents img {
+      width: 100%;
       border: 1px solid rgb(0, 0, 0, 0.8);
       border-radius: .25rem;
       box-sizing: border-box;
@@ -140,7 +165,7 @@
     </p>
   </div>
   <main class="ml3-l mr3-l ml1 mr1">
-    <div class="mw6 mb4-l mb3 mt3-l mt2">
+    <div class="mb4-l mb3 mt3-l mt2 blog">
       <p>Okay, okay. Finally getting back into writing up some notes/ideas here, after working on a new design for the site. Next few entries will probably be about how the site was made, joining the long navel-gazing tradition of writing about using a static site generator by using a static site generator. Riveting stuff.</p>
 
     </div>
@@ -160,6 +185,16 @@
       </div>
       <div class="w-third fl tc pt2-l pt1">
         <a href="/blog/" class="fw5 fw4-l link black-90 dim nav-links f5">All Posts</a>
+      </div>
+       <div class="w-third fl tc-l tr pt2-l pt1">
+        <a href="/blog/testing-code-highlighting" class="fw5 fw4-l link black-90 dim nav-links f5">Next <span style="padding-top:0.25rem; font-size:85%;">&#x2192</span> 
+          <a class="link black dim" href="/blog/testing-code-highlighting">
+            <div class="ba b--black-80 br2 pa2 mt2 dim">
+              <p class="f5 mt2 mb0">Testing code highlighting</p>
+              <p class="f7 mt1">June 18, 2020</p>
+            </div>
+          </a>
+        </a>
       </div>
     </div>
   <div class="mt4-l mt2 pt1 pt0-l"></div>
