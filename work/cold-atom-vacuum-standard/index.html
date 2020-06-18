@@ -70,6 +70,9 @@
       pre code {
         padding: 1rem !important;
       }
+      .nav-bar {
+        margin-top: -0.25rem;
+      }
     }
     @media (max-width: 60rem) {
       .grid-item {
@@ -154,7 +157,7 @@
     <div id="head" class="w-100 center">
       <div class="pt3-l pb2-l mt2">
         <a href="/" class="f4-l f6 link black mb0 dim dn fl-l db-l">Inform Studio</a>
-        <ul class="list pl0 fr-l mt0 nav-links f5 mb0">
+        <ul class="list nav-bar pl0 fr-l mt0 nav-links f5 mb0">
           <li class="dib mr3-l mr1 mb0-l mb1 db dn-l pa1 pl2 pr2 ba bn-l br2 "><a class="link black dim link-mobile" href="/">Home</a></li>
           <li class="dib mr3-l mr1 mb0-l mb1 pa1 pl2 pr2 ba bn-l br2  bg-black-80 b--black-80 "><a class="link black dim link-mobile fw5 white " href="/work/">Work</a></li>
           <li class="dib mr3-l mr1 mb0-l mb1 pa1 pl2 pr2 ba bn-l br2 "><a class="link black dim link-mobile" href="/about.html">About</a></li>
@@ -222,20 +225,23 @@
         <a href="/work/" class="fw5 fw4-l link black-90 dim nav-links f5">All Work</a>
       </div>
       <div class="w-third fl tc-l tr pt2-l pt1">
-        <a href="/work/single-flux-quanta" class="fw5 fw4-l link black-90 dim nav-links f5">Next <span style="padding-top:0.25rem; font-size:85%;">&#x2192</span></a>
+        <a href="/work/single-flux-quantum-synthesizer" class="fw5 fw4-l link black-90 dim nav-links f5">Next <span style="padding-top:0.25rem; font-size:85%;">&#x2192</span></a>
         <div class="relative overflow-hidden mt2 ba b--black-80 br2">
-        <a class="link black" href="/work/single-flux-quanta">
+        <a class="link black" href="/work/single-flux-quantum-synthesizer">
           <div class="tl dn db-l absolute w-100 h-100 h-100 pb4-l fade-in z-1">
             <div class="w-100 pa2 bg-white">
-              <p class="f6">Single flux quantum circuit</p>
+              <p class="f6">NIST&#x27;s single flux quantum waveform synthesizer</p>
               <p class="f7">September 2018</p>
             </div>
           </div>
-          <img class="db w-100"
-               src="/work/single-flux-quanta/512w-thumb.jpg"
-               srcset="/work/single-flux-quanta/256w-thumb.jpg 256w,
-                       /work/single-flux-quanta/512w-thumb.jpg 512w"
-               alt="Cutaway view of the CAVS device.">
+          <video loop muted playsinline poster="/work/single-flux-quantum-synthesizer/thumb.jpg" class="db w-100 video-thumb">
+            <source
+                    src="/work/single-flux-quantum-synthesizer/thumb.mp4"
+                    type="video/mp4"> 
+            <img
+                 src="/work/single-flux-quantum-synthesizer/thumb.jpg"
+                 title="Your browser does not support the <video> tag">
+          </video>
         </a>
         </div>
       </div>
