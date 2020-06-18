@@ -5,7 +5,6 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
   color: #abb2bf;
   background: #282c34;
 }
