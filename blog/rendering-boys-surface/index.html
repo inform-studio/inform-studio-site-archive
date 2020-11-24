@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>Inform Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <!--  Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!--  Styling -->
+  <link rel="stylesheet" href="/tachyons.min.css">
+  <link rel="stylesheet" href="/inter.css">
+  <link rel="stylesheet" href="/highlight.css">
+  <style>
+    @font-face {
+      font-family: 'open-arrow';
+      src: url('/fonts/OpenArrow-Regular.eot') format('embedded-opentype'),
+           url('/fonts/OpenArrow-Regular.woff2') format('woff2'),
+           url('/fonts/OpenArrow-Regular.woff') format('woff'),
+           url('/fonts/OpenArrow-Regular.otf') format('opentype'),
+           url('/fonts/OpenArrow-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      unicode-range: U+2190-21ff;
+    }
+    @import "/inter.css";
+    html { font-family: 'open-arrow', 'Inter', sans-serif; line-height: 1.15;}
+    ul {
+      padding-left:1rem;
+    }
+    /*    Messing around with inverted theme*/
+/*
+    .black {
+      color: white !important;
+    }
+    .b--black-80 {
+      border-color: white !important;
+    }
+    a {
+      color: #349cf7 !important;
+    }
+    .bg-light-gray {
+      background-color: white !important;
+      color: black !important;
+    }
+    .hover-bg-light-gray:hover {
+      background-color: white !important;
+      color: black !important;
+    }
+    .bw1 {
+      border-color: white !important;
+    }
+    .bg-white {
+      color: black !important;
+    }
+*/
+    @media (min-width: 60rem) {
+      html {line-height: 1.5;}
+      .headshot {
+        width: 200px;
+        height: 200px
+      }
+      .nav-links {
+        font-size: 1.15rem;
+      }
+      .index-button {
+        max-width: 20rem;
+      }
+      code {
+        font-size: 0.8rem !important;
+      }
+      pre code {
+        padding: 1rem !important;
+      }
+      .nav-bar {
+        margin-top: -0.25rem;
+      }
+    }
+    @media (max-width: 60rem) {
+      .grid-item {
+      padding: 0.125rem;
+      }
+      .grid-spacer {
+      padding-left: 0.125rem;
+      padding-right: 0.125rem;
+      }
+/*
+      .link-mobile {
+        border-bottom: 1px solid black;
+      }
+*/
+    }
+    .selected {
+     border-bottom: 3px solid black;
+    }
+    .b-button {
+      box-sizing: border-box;
+    }
+    a {
+      color: #0074D9;
+    }
+    code {
+      font-size: 0.7rem;
+    }
+    .contents :not(img) {
+      max-width: 30em;
+    }
+    .blog :not(.lang-highlight):not(code) {
+       max-width: 36em;
+    }
+    pre code {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    pre {
+     white-space: pre-wrap;       /* css-3 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+    .contents img {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      box-sizing: border-box;
+    }
+    .video-thumb::-internal-media-controls-overlay-cast-button {
+      display: none;
+    }
+    .fade-in {
+        opacity: 0;
+        transition: 0.15s ease-in;
+      }
+    .fade-in:hover {
+        opacity: 1;
+      }
+      /* Styling for lazy loaded images */
+
+      .lazy {
+        opacity:0;
+        transition: opacity 1s linear;
+      }
+
+      .lazy.initial {
+        transition: none !important;
+      }
+      .lazy.initial,
+      .lazy.loaded,
+      .lazy.error {
+        opacity: 1 !important;
+      }
+    </style>
+  </head><body class="w-100 black-90 f6 relative pa3-l pt0 pb1 mw8 center">
+  <header class="ml3-l mr3-l ml1 mr1 mb2 pb2 mb0-l pb4-l">
+    <div id="head" class="w-100 center">
+      <div class="pt3-l pb2-l mt2">
+        <a href="/" class="f4-l f6 link black mb0 dim dn fl-l db-l">Inform Studio</a>
+        <ul class="list nav-bar pl0 fr-l mt0 nav-links f5 mb0">
+          <li class="dib mr3-l mr1 mb0-l mb1 db dn-l pa1 pl2 pr2 ba bn-l br2 "><a class="link black dim link-mobile" href="/">Home</a></li>
+          <li class="dib mr3-l mr1 mb0-l mb1 pa1 pl2 pr2 ba bn-l br2 "><a class="link black dim link-mobile" href="/work/">Work</a></li>
+          <li class="dib mr3-l mr1 mb0-l mb1 pa1 pl2 pr2 ba bn-l br2 "><a class="link black dim link-mobile" href="/about.html">About</a></li>
+          <li class="dib mr3-l mr1 mb0-l mb1 pa1 pl2 pr2 ba bn-l br2  bg-black-80 b--black-80 "><a class="link black dim link-mobile fw5 white" href="/blog/">Blog</a></li>
+          <li class="dib mb0-l mb1 pa1 pl2 pr2 pr0-l ba bn-l br2"><a class="link black dim link-mobile" href="mailto:sean@inform.studio">Contact</a></li>
+        </ul>       </div>
+    </div>
+  </header>  <div class="ml3-l mr3-l ml1 mr1">
+    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2">Rendering Boy's surface in Blender</p>
+     <p class="f7">Published: November 24, 2020
+       • Tagged: 
+         <a href="/blog/tags#python">Python</a>,
+         <a href="/blog/tags#blender">Blender</a>
+    </p>
+  </div>
+  <main class="ml3-l mr3-l ml1 mr1">
+    <div class="mb4-l mb3 mt3-l mt2 blog">
+      <p><a href="https://en.wikipedia.org/wiki/Boy%27s_surface">Boy's surface</a> is a one-sided surface in three-dimensional surface (or in mathematical jargon, an immersion of the real projective plane in R3) that was discovered by Werner Boy, a student of David Hilbert, in 1902.</p>
+<img src="surface.png" class="center">
+
+<p>To render this lovely shape, we're going to use the Bryant–Kusner parametrization:</p>
+<img src="parametrization.jpg" class="center">
+
+<p>In each case, <strong>w</strong> is a complex number where the absolute value of w is less than or equal to one (|w| ≤ 1):</p>
+<p>We begin our geometry-generation with some usual imports. The cmath package is included for dealing with complex numbers.</p>
+<pre class="lang-highlight"><code class="language-python hljs"><span class="hljs-keyword">import</span> bpy
+<span class="hljs-keyword">import</span> cmath
+<span class="hljs-keyword">import</span> math</code></pre>
+<p>Next, we'll set up some functions for calculating the Cartesian x, y, and z positions for each vertex. Here, <strong>z</strong> is the complex number described above:</p>
+<pre class="lang-highlight"><code class="language-python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">g1</span><span class="hljs-params">(z)</span>:</span>
+    k = (z * (<span class="hljs-number">1</span> - z ** <span class="hljs-number">4</span>)) / (z ** <span class="hljs-number">6</span> + math.sqrt(<span class="hljs-number">5</span>) * z ** <span class="hljs-number">3</span> - <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-3</span>/<span class="hljs-number">2</span> * k.imag
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">g2</span><span class="hljs-params">(z)</span>:</span>
+    k = (z * (<span class="hljs-number">1</span> + z ** <span class="hljs-number">4</span>)) / (z ** <span class="hljs-number">6</span> + math.sqrt(<span class="hljs-number">5</span>) * z ** <span class="hljs-number">3</span> - <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-3</span>/<span class="hljs-number">2</span> * k.real
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">g3</span><span class="hljs-params">(z)</span>:</span>
+    k = (<span class="hljs-number">1</span> + z ** <span class="hljs-number">6</span>) / (z ** <span class="hljs-number">6</span> + math.sqrt(<span class="hljs-number">5</span>) * z ** <span class="hljs-number">3</span> - <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">return</span> k.imag - <span class="hljs-number">1</span>/<span class="hljs-number">2</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">g</span><span class="hljs-params">(z)</span>:</span>
+    <span class="hljs-keyword">return</span> g1(z) ** <span class="hljs-number">2</span> + g2(z) ** <span class="hljs-number">2</span> + g3(z) ** <span class="hljs-number">2</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">X</span><span class="hljs-params">(z)</span>:</span>
+    <span class="hljs-keyword">return</span> g1(z) / g(z)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Y</span><span class="hljs-params">(z)</span>:</span>
+    <span class="hljs-keyword">return</span> g2(z) / g(z)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Z</span><span class="hljs-params">(z)</span>:</span>
+    <span class="hljs-keyword">return</span> g3(z) / g(z)</code></pre>
+<p>Next, the actual mesh generation. Note that the restriction |z| ≤ 1 makes the choice of polar coordinates natural:</p>
+<pre class="lang-highlight"><code class="language-python hljs">r_divisions = <span class="hljs-number">32</span>
+phi_divisions = <span class="hljs-number">64</span>
+verts = []
+faces = []
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">vertex</span><span class="hljs-params">(r, p)</span>:</span>
+    <span class="hljs-string">""" Create a single vertex """</span>
+    radius = <span class="hljs-number">1.0</span> / r_divisions * r
+    phi = <span class="hljs-number">2.0</span> * math.pi / phi_divisions * p
+    z = cmath.rect(radius, phi)
+    <span class="hljs-keyword">return</span> (X(z), Y(z), Z(z))
+
+verts = [vertex(r, p) <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(r_divisions) <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> range(phi_divisions)]
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">face</span><span class="hljs-params">(r, p)</span>:</span>
+    <span class="hljs-string">""" Create a single face """</span>
+    v1 = r * phi_divisions + p
+    v2 = (r + <span class="hljs-number">1</span>) * phi_divisions + p
+    v3 = (r + <span class="hljs-number">1</span>) * phi_divisions + <span class="hljs-number">1</span> + p
+    v4 = r * phi_divisions + <span class="hljs-number">1</span> + p
+    <span class="hljs-keyword">return</span> (v1, v2, v3, v4)
+
+faces = [face(r, p) <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(r_divisions<span class="hljs-number">-1</span>) <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> range(phi_divisions - <span class="hljs-number">1</span>)]</code></pre>
+<p>Finally, to generate the mesh:</p>
+<pre class="lang-highlight"><code class="language-python hljs">name = <span class="hljs-string">'Boys Surface'</span>
+
+<span class="hljs-comment"># Create Mesh Datablock</span>
+mesh = bpy.data.meshes.new(name)
+mesh.from_pydata(verts, [], faces)
+
+<span class="hljs-comment"># Create Object and link to scene</span>
+obj = bpy.data.objects.new(name, mesh)
+bpy.context.scene.collection.objects.link(obj)</code></pre>
+<p>Two important notes: </p>
+<ol>
+<li>There will be two seams left in the mesh which have to be joined by hand, simply by selecting the edges and creating new faces. I found this simpler than trying to find which vertex indexes would eventually align as the mesh curves back and self-intersects.</li>
+<li>Since this is a single-sided surface, there are seams where where the normals are all weird ¯_(ツ)_/¯</li>
+</ol>
+<p>Here's the final result (with subsurf applied):</p>
+<video loop="" autoplay="" muted="" playsinline="" class="w-100 ba b--black-80 br2" name="media">
+  <source src="boys-render.mp4" type="video/mp4"> 
+</video>
+
+<p>Download the <a href="https://drive.google.com/file/d/1nYTEnl316myLbXSBb6KumlJOoCD128DP/view?usp=sharing">blender file</a> if you'd like to take a look around or use it in one of your projects.</p>
+
+    </div>
+    <div class="pa0-l">
+      <p class="f7 mb3 mw6">Questions or comments? Email <a href="mailto:sean@inform.studio" class="link blue dim bb-l">sean@inform.studio</a>.</p>
+    </div>
+    <div class="w-100 mw7 flex mt4-l mb3-l mb2 pt1">
+      <div class="w-third fl tc-l tl pt2-l pt1">
+        <a href="/blog/simulating-cell-division-blender" class="fw5 fw4-l link black-90 dim nav-links f5"><span style="padding-top:0.25rem; font-size:85%;">←</span> Previous
+          </a><a class="link black" href="/blog/simulating-cell-division-blender">
+            <div class="ba b--black-80 br2 pa2 mt2 dim">
+              <p class="f5 mt2 mb0">Simulating cell division in Blender</p>
+              <p class="f7 mt1">June 30, 2020</p>
+            </div>
+          </a>
+        
+      </div>
+      <div class="w-third fl tc pt2-l pt1">
+        <a href="/blog/" class="fw5 fw4-l link black-90 dim nav-links f5">All Posts</a>
+      </div>
+    </div>
+  <div class="mt4-l mt2 pt1 pt0-l"></div>
+  </main>
+  <footer class="ml3-l mr3-l ml1 mr1 bt-l b--black-80">
+    <p class="f7 mb0"><a href="/" class="dim link blue">Inform Studio</a> <span class="mr2-l ml2-l">•</span> Salisbury MD USA <span class="mr2-l ml2-l">•</span> <a href="/about.html" class="dim link blue">About</a> <span class="mr2-l ml2-l">•</span> <a href="mailto:info@inform.studio" class="dim link blue">Contact</a></p>
+  </footer>
+</body></html>
